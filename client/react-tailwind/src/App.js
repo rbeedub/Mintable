@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import TextEditor from './TextEditor';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function App() {
           </Route>
           <Route path="/">
             <h1>Page Count: {count}</h1>
+            <TextEditor />
           </Route>
         </Switch>
       </div>
