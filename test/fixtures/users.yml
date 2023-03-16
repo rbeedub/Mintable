@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  seniority: 1
+  email: MyString
+  direct_reports: 1
+  username: MyString
+  password_digest: MyString
+  bio: MyText
+  location_zip: 1
+  location_name: MyString
+  company: MyString
+  logo: MyString
+  photo: MyString
+  role: 1
+  manager_email: MyString
+  dr_email: MyString
+  workbook: one
+  cohort: one
+
+two:
+  name: MyString
+  seniority: 1
+  email: MyString
+  direct_reports: 1
+  username: MyString
+  password_digest: MyString
+  bio: MyText
+  location_zip: 1
+  location_name: MyString
+  company: MyString
+  logo: MyString
+  photo: MyString
+  role: 1
+  manager_email: MyString
+  dr_email: MyString
+  workbook: two
+  cohort: two
