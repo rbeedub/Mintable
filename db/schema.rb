@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(version: 2023_03_16_030857) do
     t.integer "role"
     t.string "manager_email"
     t.string "dr_email"
-    t.bigint "workbook_id", null: false
-    t.bigint "cohort_id", null: false
+    t.bigint "workbook_id"
+    t.bigint "cohort_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cohort_id"], name: "index_users_on_cohort_id"

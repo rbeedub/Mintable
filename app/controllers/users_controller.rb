@@ -1,19 +1,44 @@
 class UsersController < ApplicationController
-    def create
-        user = User.create!(user_params)
-        session[:user_id] = user.id
-        render json: user, status: :created
-    end
 
-    def show
-        current_user = User.find(session[:user_id])
-        render json: current_user
-        end
+skip_before_action :authorize, only: [:create, :userDetail]
 
-    private 
-    def user_params
-        params.permit(:name, :email, :direct_reports, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email)
-    end
+def index
+    render json: User.all, status: :ok
+end
+
+def create
+    @user = User.create!(user_params)
+    workbook = Workbook.create!(week:1)
+    @user.update(workbook: workbook)
+    @user.update(cohort: Cohort.all.sample)
+    session[:user_id] = @user.id
+    render json: @user, status: :created, serializer: LoggedInUserSerializer
+end
+
+def show
+    render json: @user, status: :ok, serializer: LoggedInUserSerializer
+end
+
+def userDetail
+    user = User.find_by!(id: params[:id])
+    render json: user, status: :ok, serializer: LoggedInUserSerializer
+end
+
+def update
+    @user.update!(user_params)
+    render json: @user, status: :accepted, serializer: LoggedInUserSerializer
+end
+
+def destroy
+    @user.destroy
+    session.delete :user_id
+    head :no_content
+end
+
+private
+def user_params
+    params.permit(:name, :email, :direct_reports, :seniority, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email)
+end
 
 
 end

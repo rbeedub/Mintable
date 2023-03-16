@@ -16,8 +16,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.integer :role
       t.string :manager_email
       t.string :dr_email
-      t.belongs_to :workbook, null: false, foreign_key: true
-      t.belongs_to :cohort, null: false, foreign_key: true
+      t.belongs_to :workbook, null: true, foreign_key: true
+      t.belongs_to :cohort, null: true, foreign_key: true
 
       t.timestamps
     end

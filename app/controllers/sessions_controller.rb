@@ -17,10 +17,10 @@ class SessionsController < ApplicationController
         head :no_content
     end
 
-    private
+    # private
 
-    def authorize
-        render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
-    end
+    # def authorize
+    #     render json: {error: "Not authorized"}, status: :unauthorized unless session.include? :user_id
+    # end
 
 end
