@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_16_030857) do
+ActiveRecord::Schema.define(version: 2023_03_17_164025) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,6 +77,19 @@ ActiveRecord::Schema.define(version: 2023_03_16_030857) do
     t.index ["workbook_id"], name: "index_reflections_on_workbook_id"
   end
 
+  create_table "stakeholders", force: :cascade do |t|
+    t.text "q1"
+    t.text "q2"
+    t.text "q3"
+    t.text "q4"
+    t.text "q5"
+    t.text "q6"
+    t.bigint "workbook_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["workbook_id"], name: "index_stakeholders_on_workbook_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.integer "seniority"
@@ -111,6 +124,7 @@ ActiveRecord::Schema.define(version: 2023_03_16_030857) do
   add_foreign_key "exercises", "workbooks"
   add_foreign_key "motivations", "workbooks"
   add_foreign_key "reflections", "workbooks"
+  add_foreign_key "stakeholders", "workbooks"
   add_foreign_key "users", "cohorts"
   add_foreign_key "users", "workbooks"
 end

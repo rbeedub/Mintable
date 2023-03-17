@@ -3,4 +3,5 @@ class UserSerializer < ActiveModel::Serializer
   
   has_one :workbook, optional: true
   has_one :cohort, optional: true
+  
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :stakeholders
   resources :users
   resources :motivations
   resources :commits

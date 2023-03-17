@@ -141,3 +141,17 @@ User.all.each do |u|
         workbook_id: Workbook.all.sample.id,
     )
 end
+
+# #quickcommit
+puts "Seeding stakeholders...."
+User.all.each do |u|
+    Stakeholder.create(
+        q1: Faker::Lorem.paragraph(sentence_count: 1),
+        q2: Faker::Lorem.paragraph(sentence_count: 1),
+        q3: Faker::Lorem.paragraph(sentence_count: 1),
+        q4: Faker::Lorem.paragraph(sentence_count: 1),
+        q5: Faker::Lorem.paragraph(sentence_count: 1),
+        q6: Faker::Lorem.paragraph(sentence_count: 1),
+        workbook_id: Workbook.all.sample.id,
+    )
+end
