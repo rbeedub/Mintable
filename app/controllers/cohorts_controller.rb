@@ -9,9 +9,9 @@ class CohortsController < ApplicationController
     end
 
     def create
-        event = Cohort.create!(cohort_params)
+        cohort = Cohort.create!(cohort_params)
         # SkillLevel.create!(skillable: event, skill_level: params[:skill_level])
-        render json: event, status: :created
+        render json: cohort, status: :created
     end
 
     # def update

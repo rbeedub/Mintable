@@ -27,6 +27,9 @@ puts "Seeding workbook..."
  )
 end
 
+#week
+puts "Seeding week..."
+    Week.create(date_time: Faker::Time.between(from: DateTime.now - 1,to: DateTime.now, format: :short), week: 1)
 
 puts "Seeding users..."
 User.create(
@@ -108,6 +111,7 @@ User.all.each do |u|
         motivations4:Faker::Company.bs,
         motivations5:Faker::Company.bs,
         workbook_id: Workbook.all.sample.id,
+        week: Week.all.sample.id 
     )
 end
 
@@ -130,6 +134,7 @@ User.all.each do |u|
         quick_commit1: Faker::GreekPhilosophers.quote,
         quick_commit2: Faker::GreekPhilosophers.quote,
         workbook_id: Workbook.all.sample.id,
+        week: Week.all.sample.id 
     )
 end
 
@@ -137,8 +142,9 @@ end
 puts "Seeding reflection...."
 User.all.each do |u|
     Reflection.create(
-        notes: Faker::Lorem.paragraph(sentence_count: 3),
+        notes: Faker::Lorem.paragraph(sentence_count: 1),
         workbook_id: Workbook.all.sample.id,
+        week: Week.all.sample.id 
     )
 end
 
@@ -153,5 +159,6 @@ User.all.each do |u|
         q5: Faker::Lorem.paragraph(sentence_count: 1),
         q6: Faker::Lorem.paragraph(sentence_count: 1),
         workbook_id: Workbook.all.sample.id,
+        week: Week.all.sample.id 
     )
 end

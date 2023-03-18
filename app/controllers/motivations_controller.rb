@@ -15,7 +15,7 @@ class MotivationsController < ApplicationController
     def update
         @motivation.update!(motivation_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @motivation, status: :accepted
     end
 
     def destroy

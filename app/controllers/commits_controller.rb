@@ -9,15 +9,15 @@ class CommitsController < ApplicationController
     end
 
     def create
-        event = Commit.create!(commit_params)
+        commit = Commit.create!(commit_params)
         # SkillLevel.create!(skillable: event, skill_level: params[:skill_level])
-        render json: event, status: :created
+        render json: commit, status: :created
     end
 
     def update
         @commit.update!(commit_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @commit, status: :accepted
     end
 
     def destroy

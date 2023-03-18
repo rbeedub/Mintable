@@ -16,7 +16,7 @@ class ReflectionsController < ApplicationController
     def update
         @reflection.update!(reflection_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @reflection, status: :accepted
     end
 
     def destroy

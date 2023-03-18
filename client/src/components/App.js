@@ -33,18 +33,20 @@ function App() {
   }, []);
 
 
-
-
   useEffect(() => {
     // auto-login
     if (user) {
     fetch(`/workbooks/${user.workbook.id}`).then((r) => {
       if (r.ok) {
-        r.json().then((res) => console.log(res));
+        r.json().then((res) => setWorkbook(res));
       }
     });
   }
   }, [user])
+
+  console.log(workbook)
+
+  const { commits, exercises, motivations, reflections, stakeholders, week } = workbook
 
 
   //   fetch("/workbook").then((r) => {
@@ -71,7 +73,8 @@ function App() {
         <Route index element={<Home/>}  />
 
         <Route path="reflection" element={<Reflection
-        user={user} setUser={setUser}/>}/>
+        user={user} setUser={setUser} reflections={reflections}
+        />}/>
 
         <Route path="motivation" element={<Motivation/>}/>
 

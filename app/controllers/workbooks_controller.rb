@@ -10,18 +10,18 @@ before_action :set_workbook, except: [:index, :create]
     end
 
     def create
-        event = Workbook.create!(stakeholder_params)
-        render json: event, status: :created
+        workbook = Workbook.create!(workbook_params)
+        render json: workbook, status: :created
     end
 
     def update
-        @stakeholder.update!(stakeholder_params)
+        @workbook.update!(workbook_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @workbook, status: :accepted
     end
 
     def destroy
-        @stakeholder.destroy
+        @workbook.destroy
         head :no_content
     end
 
@@ -32,7 +32,7 @@ before_action :set_workbook, except: [:index, :create]
     end
 
     def stakeholder_params
-        params.permit(:q1, :q2, :q3, :q4, :q5, :q6)
+        params.permit(:week)
     end
 
 

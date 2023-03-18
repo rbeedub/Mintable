@@ -9,14 +9,14 @@ class StakeholdersController < ApplicationController
     end
 
     def create
-        event = Stakeholder.create!(stakeholder_params)
-        render json: event, status: :created
+        stakeholder = Stakeholder.create!(stakeholder_params)
+        render json: stakeholder, status: :created
     end
 
     def update
         @stakeholder.update!(stakeholder_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @stakeholder, status: :accepted
     end
 
     def destroy

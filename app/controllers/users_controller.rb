@@ -11,6 +11,7 @@ def create
     workbook = Workbook.create!(week:1)
     @user.update(workbook: workbook)
     @user.update(cohort: Cohort.all.sample)
+    @user.update(cohort: Week.all.sample)
     session[:user_id] = @user.id
     render json: @user, status: :created, serializer: LoggedInUserSerializer
 end

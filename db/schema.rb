@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_17_164025) do
+ActiveRecord::Schema.define(version: 2023_03_18_034326) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.integer "date_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
   end
 
   create_table "commits", force: :cascade do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
     t.index ["workbook_id"], name: "index_commits_on_workbook_id"
   end
 
@@ -38,6 +40,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
     t.index ["workbook_id"], name: "index_exercises_on_workbook_id"
   end
 
@@ -66,6 +69,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
     t.index ["workbook_id"], name: "index_motivations_on_workbook_id"
   end
 
@@ -74,6 +78,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
     t.index ["workbook_id"], name: "index_reflections_on_workbook_id"
   end
 
@@ -87,6 +92,7 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week"
     t.index ["workbook_id"], name: "index_stakeholders_on_workbook_id"
   end
 
@@ -112,6 +118,13 @@ ActiveRecord::Schema.define(version: 2023_03_17_164025) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cohort_id"], name: "index_users_on_cohort_id"
     t.index ["workbook_id"], name: "index_users_on_workbook_id"
+  end
+
+  create_table "weeks", force: :cascade do |t|
+    t.integer "date_time"
+    t.integer "week"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "workbooks", force: :cascade do |t|

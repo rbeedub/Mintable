@@ -9,14 +9,14 @@ class ExercisesController < ApplicationController
     end
 
     def create
-        event = Exercise.create!(exercise_params)
-        render json: event, status: :created
+        exercise = Exercise.create!(exercise_params)
+        render json: exercise, status: :created
     end
 
     def update
         @exercise.update!(commit_params)
         work_book = Workbook.find_by!(workbook_id: @workboook)
-        render json: @event, status: :accepted
+        render json: @exercise, status: :accepted
     end
 
     def destroy
