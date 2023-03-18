@@ -13,7 +13,6 @@ function SignInPage ({ setUser }){
     <>
 
 <h2 class="ui center aligned white icon header">
-<i class="inverted circular users icon"></i>
 Already a Member?
 </h2>
 

@@ -4,7 +4,7 @@ import ErrorMsgList from "./ErrorMsgList";
 import ProfileUpdatedMsg from "./ProfileUpdatedMsg";
 
 
-function EditProfileForm({ user, setUser }) {
+function EditProfileForm( {user, setUser} ) {
 
     const [formData, setFormData] = useState(user)
     const [errors, setErrors] = useState([])
@@ -100,7 +100,7 @@ function EditProfileForm({ user, setUser }) {
                                     </div>
                                    
                                 </div>
-                                <button class="ui teal button" type="submit">Submit Edit</button>
+                                <button class="ui button" type="submit">Submit Edit</button>
                             </div>
                         </div>
                     </form>
@@ -108,7 +108,7 @@ function EditProfileForm({ user, setUser }) {
 
             <div class="column">
                 <div class="ui basic segment">
-                    <button class="ui pink button" type="submit" onClick={handleDeleteAccount}>Delete Your Profile</button>
+                    <button class="ui button" type="submit" onClick={handleDeleteAccount}>Delete Your Profile</button>
                 </div>
             </div>
   

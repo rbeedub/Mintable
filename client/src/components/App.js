@@ -18,7 +18,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [events, setEvents] = useState([]);
   const [people, setPeople] = useState([]);
-
+  const [workbook, setWorkbook] = useState([])
  
 
 
@@ -32,7 +32,31 @@ function App() {
 
   }, []);
 
+
+
+
+  useEffect(() => {
+    // auto-login
+    if (user) {
+    fetch(`/workbooks/${user.workbook.id}`).then((r) => {
+      if (r.ok) {
+        r.json().then((res) => console.log(res));
+      }
+    });
+  }
+  }, [user])
+
+
+  //   fetch("/workbook").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((workbook) => setWorkbook(user));
+  //     }
+  //   });
+
+  // }, []);
+
   console.log(user)
+
   if (!user) return <LandingPage setUser = {setUser}/>;
 
   return (
@@ -45,6 +69,7 @@ function App() {
     <Routes>
       <Route path="/" element={<DashboardLayout/>} exact />
         <Route index element={<Home/>}  />
+
         <Route path="reflection" element={<Reflection
         user={user} setUser={setUser}/>}/>
 
@@ -56,7 +81,7 @@ function App() {
 
         <Route path="stakeholders" element={<Stakeholders/>}/>
         
-        <Route exact path="/edit-profile" element={<EditProfile
+        <Route exact path="edit-profile" element={<EditProfile
         user={user}
         setUser={setUser}
         />}/>

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
-  belongs_to :workbook, optional: true
+  belongs_to :workbook
   belongs_to :cohort, optional: true
+
+  # has_many :reflections, through: :workbooks
 
 
 
