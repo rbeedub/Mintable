@@ -14,7 +14,9 @@ const reflectionResponse = user?.reflections.map(reflection  => {
 
 return (
 <>
-{reflectionResponse}</>
+   {reflectionResponse}
+
+</>
 )
 }
 

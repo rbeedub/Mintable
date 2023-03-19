@@ -16,20 +16,20 @@ console.log(motivationList)
    }
    )
 
-   const energizedByResponse = user?.motivations.map(motivation  => {
-      return <EnergizedByCard key={motivation.id} {...motivation} user={user} />
+   const energizedByResponse = motivationList.map(motivation  => {
+      return <EnergizedByCard key={motivation.id} {...motivation} user={user} onFormSubmit={onFormSubmit} />
    }
    )
-   const drainedByResponse = user?.motivations.map(motivation  => {
-      return <DrainedByCard key={motivation.id} {...motivation} user={user} />
+   const drainedByResponse = motivationList.map(motivation  => {
+      return <DrainedByCard key={motivation.id} {...motivation} user={user} onFormSubmit={onFormSubmit} />
    }
    )
-   const contextResponse = user?.motivations.map(motivation  => {
-      return <ContextCard key={motivation.id} {...motivation} user={user} />
+   const contextResponse = motivationList.map(motivation  => {
+      return <ContextCard key={motivation.id} {...motivation} user={user} onFormSubmit={onFormSubmit} />
    }
    )
-   const motivationsResponse = user?.motivations.map(motivation  => {
-      return <WorkMotivationsCard key={motivation.id} {...motivation} user={user} />
+   const motivationsResponse = motivationList.map(motivation  => {
+      return <WorkMotivationsCard key={motivation.id} {...motivation} user={user} onFormSubmit={onFormSubmit} />
    }
    )
 

@@ -36,29 +36,6 @@ function App() {
   }, []);
 
 
-  // useEffect(() => {
-  //   // auto-login
-  //   if (user) {
-  //   fetch(`/workbooks/${user.workbook.week.id}`).then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((res) => setWorkbook(res));
-  //     }
-  //   });
-  // }
-  // }, [user])
-
-
-
-
-  //   fetch("/workbook").then((r) => {
-  //     if (r.ok) {
-  //       r.json().then((workbook) => setWorkbook(user));
-  //     }
-  //   });
-
-  // }, []);
-
-
   function onFormSubmit(newSubmit) {
     setMotivationList([newSubmit])
   }
@@ -84,7 +61,12 @@ function App() {
         />}/>
 
         <Route path="motivation" element={<MotivationMap
-        user={user} setUser={setUser} onFormSubmit={onFormSubmit} motivationList={motivationList} setMotivationList={motivationList} />}/>
+        user={user}
+        setUser={setUser}
+        onFormSubmit={onFormSubmit}
+        motivationList={motivationList}
+        setMotivationList={motivationList}/>
+        }/>
 
         <Route path="drill" element={<MotivationDrill/>}/>
 

@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from 'react';
 
-function PersonalValuesCard( {id, personal_values1, personal_values2, personal_values3, personal_values4, personal_values5, user, setUser, onFormSubmit, motivationList, setMotivationList } ) {
-
-
-    console.log(id)
+function PersonalValuesCard( {id, personal_values1, personal_values2, personal_values3, personal_values4, personal_values5,onFormSubmit } ) {
 
     const initialData = {
         personal_values1:'',
@@ -36,7 +33,6 @@ function handleSubmitForm(e) {
     .then((res) => res.json())
     .then(onFormSubmit)
     .then(setFormData(initialData))
-
 }
 
 return (

@@ -1,6 +1,39 @@
 import React from "react";
+import {useState} from "react";
 
-function WorkMotivationsCard( { motivations1, motivations2, motivations3, motivations4, motivations5 } ) {
+function WorkMotivationsCard( { id, onFormSubmit, motivations1, motivations2, motivations3, motivations4, motivations5 } ) {
+   
+    const initialData = {
+        motivations1:'',
+        motivations2:'',
+        motivations3:'',
+        motivations4:'',
+        motivations5:'',
+        }
+
+const [formData, setFormData] = useState(initialData)
+
+function handleFormChange(e) {
+    const {name, value} = e.target;
+    console.log(e.target.value)
+    setFormData({...formData, [name]: value})
+    }
+
+
+function handleSubmitForm(e) {
+    e.preventDefault()
+
+    fetch(`/motivations/${id}`, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then((res) => res.json())
+    .then(onFormSubmit)
+    .then(setFormData(initialData))
+}
 
 return (
 
@@ -11,8 +44,7 @@ return (
     <div class="ui three column grid">
         <div class="teal column">
         <label>My Work Motivations</label>
-  
-            
+
             <div class="ui list">
                 <div class="item">
                     1 {motivations1}
@@ -38,27 +70,27 @@ return (
         </div>
 
         <div class="orange column">
-        <form class="ui form" >    
+        <form class="ui form" onSubmit={handleSubmitForm} >
         <div class="ui form">
             <div class="field">
                 <label>List your Work Motivations</label>
-                <input value= '' type="text" name="motivations1" placeholder="1"/>
+                <input value={formData.motivations1} type="text" name="motivations1" placeholder="1" onChange={handleFormChange}/>
             </div>
             <div class="field">
            
-                <input value= '' type="text" name="motivations2" placeholder="2"/>
+                <input value={formData.motivations2} type="text" name="motivations2" placeholder="2" onChange={handleFormChange}/>
             </div>
             <div class="field">
        
-                <input value= '' type="text" name="motivations3" placeholder="3"/>
+                <input value={formData.motivations3} type="text" name="motivations3" placeholder="3" onChange={handleFormChange}/>
             </div>
             <div class="field">
      
-                <input value= '' type="text" name="motivations4" placeholder="4"/>
+                <input value={formData.motivations4} type="text" name="motivations4" placeholder="4" onChange={handleFormChange}/>
             </div>
             <div class="field">
      
-                <input value= '' type="text" name="motivations5" placeholder="5"/>
+                <input value={formData.motivations5} type="text" name="motivations5" placeholder="5" onChange={handleFormChange}/>
             </div>
             <button class="ui button">Submit</button>
             </div>

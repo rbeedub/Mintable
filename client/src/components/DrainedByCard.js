@@ -1,6 +1,39 @@
 import React from "react";
+import { useState } from 'react';
 
-function DrainedBy( {drained_by1, drained_by2, drained_by3, drained_by4, drained_by5} ) {
+function DrainedBy( {id, drained_by1, drained_by2, drained_by3, drained_by4, drained_by5, onFormSubmit } ) {
+
+    const initialData = {
+        drained_by1:'',
+        drained_by2:'',
+        drained_by3:'',
+        drained_by4:'',
+        drained_by5:'',
+        }
+
+const [formData, setFormData] = useState(initialData)
+
+function handleFormChange(e) {
+    const {name, value} = e.target;
+    console.log(e.target.value)
+    setFormData({...formData, [name]: value})
+    }
+
+
+function handleSubmitForm(e) {
+    e.preventDefault()
+
+    fetch(`/motivations/${id}`, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then((res) => res.json())
+    .then(onFormSubmit)
+    .then(setFormData(initialData))
+}
 
 return (
 
@@ -37,27 +70,27 @@ return (
         </div>
 
         <div class="teal column">
-        <form class="ui form" >
+        <form class="ui form" onSubmit={handleSubmitForm} >
         <div class="ui form">
             <div class="field">
                 <label>List what drains you</label>
-                <input value= '' type="text" name="drained_by1" placeholder="1"/>
+                <input value={formData.drained_by1} type="text" name="drained_by1" placeholder="1" onChange={handleFormChange} />
             </div>
             <div class="field">
 
-                <input value= '' type="text" name="drained_by2" placeholder="2"/>
+                <input value={formData.drained_by2} type="text" name="drained_by2" placeholder="2" onChange={handleFormChange}/>
             </div>
             <div class="field">
 
-                <input value= '' type="text" name="drained_by3" placeholder="3"/>
+                <input value={formData.drained_by3} type="text" name="drained_by3" placeholder="3" onChange={handleFormChange}/>
             </div>
             <div class="field">
 
-                <input value= '' type="text" name="drained_by4" placeholder="4"/>
+                <input value={formData.drained_by4} type="text" name="drained_by4" placeholder="4" onChange={handleFormChange}/>
             </div>
             <div class="field">
 
-                <input value= '' type="text" name="drained_by5" placeholder="5"/>
+                <input value={formData.drained_by5} type="text" name="drained_by5" placeholder="5" onChange={handleFormChange}/>
             </div>
             <button class="ui button">Submit</button>
             </div>

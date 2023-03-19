@@ -1,6 +1,36 @@
 import React from "react";
+import { useState } from 'react';
 
-function ContextCard( {context} ) {
+
+function ContextCard( { id,context,onFormSubmit } ) {
+
+    const initialData = {
+        context:'',
+        }
+
+const [formData, setFormData] = useState(initialData)
+
+function handleFormChange(e) {
+    const {name, value} = e.target;
+    console.log(e.target.value)
+    setFormData({...formData, [name]: value})
+    }
+
+
+function handleSubmitForm(e) {
+    e.preventDefault()
+
+    fetch(`/motivations/${id}`, {
+        method: 'PATCH',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then((res) => res.json())
+    .then(onFormSubmit)
+    .then(setFormData(initialData))
+}
 
 return (
 
@@ -20,13 +50,18 @@ return (
         </div>
 
         <div class="green column">
-        <form class="ui form" >
+        <form class="ui form" onSubmit={handleSubmitForm}>
         <div class="ui form">
-            <div class="field">
+            {/* <div class="field">
                 <label>What is your context?</label>
                 <input value= '' type="text" name="context" placeholder="Your context"/>
-            </div>
-    
+            </div> */}
+            <div class="ui form">
+                <div class="field">
+                    <label>My context is...</label>
+                    <textarea value={formData.context} type="text" name="context" placeholder="Your context" onChange={handleFormChange}/>
+                </div>
+                </div>
             <button class="ui button">Submit</button>
             </div>
             </form>
