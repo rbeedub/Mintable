@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_18_034326) do
+ActiveRecord::Schema.define(version: 2023_03_18_213412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,17 +19,15 @@ ActiveRecord::Schema.define(version: 2023_03_18_034326) do
     t.integer "date_time"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
   end
 
   create_table "commits", force: :cascade do |t|
     t.text "quick_commit1"
     t.text "quick_commit2"
-    t.bigint "workbook_id", null: false
+    t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
-    t.index ["workbook_id"], name: "index_commits_on_workbook_id"
+    t.index ["week_id"], name: "index_commits_on_week_id"
   end
 
   create_table "exercises", force: :cascade do |t|
@@ -37,11 +35,10 @@ ActiveRecord::Schema.define(version: 2023_03_18_034326) do
     t.integer "status"
     t.text "my_thoughts"
     t.text "next_steps"
-    t.bigint "workbook_id", null: false
+    t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
-    t.index ["workbook_id"], name: "index_exercises_on_workbook_id"
+    t.index ["week_id"], name: "index_exercises_on_week_id"
   end
 
   create_table "motivations", force: :cascade do |t|
@@ -66,20 +63,18 @@ ActiveRecord::Schema.define(version: 2023_03_18_034326) do
     t.text "motivations3"
     t.text "motivations4"
     t.text "motivations5"
-    t.bigint "workbook_id", null: false
+    t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
-    t.index ["workbook_id"], name: "index_motivations_on_workbook_id"
+    t.index ["week_id"], name: "index_motivations_on_week_id"
   end
 
   create_table "reflections", force: :cascade do |t|
     t.text "notes"
-    t.bigint "workbook_id", null: false
+    t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
-    t.index ["workbook_id"], name: "index_reflections_on_workbook_id"
+    t.index ["week_id"], name: "index_reflections_on_week_id"
   end
 
   create_table "stakeholders", force: :cascade do |t|
@@ -89,11 +84,10 @@ ActiveRecord::Schema.define(version: 2023_03_18_034326) do
     t.text "q4"
     t.text "q5"
     t.text "q6"
-    t.bigint "workbook_id", null: false
+    t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "week"
-    t.index ["workbook_id"], name: "index_stakeholders_on_workbook_id"
+    t.index ["week_id"], name: "index_stakeholders_on_week_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -112,32 +106,33 @@ ActiveRecord::Schema.define(version: 2023_03_18_034326) do
     t.integer "role"
     t.string "manager_email"
     t.string "dr_email"
-    t.bigint "workbook_id"
     t.bigint "cohort_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["cohort_id"], name: "index_users_on_cohort_id"
-    t.index ["workbook_id"], name: "index_users_on_workbook_id"
   end
 
   create_table "weeks", force: :cascade do |t|
-    t.integer "date_time"
-    t.integer "week"
+    t.bigint "workbook_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "week_number"
+    t.index ["workbook_id"], name: "index_weeks_on_workbook_id"
   end
 
   create_table "workbooks", force: :cascade do |t|
-    t.integer "week"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_workbooks_on_user_id"
   end
 
-  add_foreign_key "commits", "workbooks"
-  add_foreign_key "exercises", "workbooks"
-  add_foreign_key "motivations", "workbooks"
-  add_foreign_key "reflections", "workbooks"
-  add_foreign_key "stakeholders", "workbooks"
+  add_foreign_key "commits", "weeks"
+  add_foreign_key "exercises", "weeks"
+  add_foreign_key "motivations", "weeks"
+  add_foreign_key "reflections", "weeks"
+  add_foreign_key "stakeholders", "weeks"
   add_foreign_key "users", "cohorts"
-  add_foreign_key "users", "workbooks"
+  add_foreign_key "weeks", "workbooks"
+  add_foreign_key "workbooks", "users"
 end

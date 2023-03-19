@@ -3,7 +3,7 @@ class CreateCommits < ActiveRecord::Migration[6.1]
     create_table :commits do |t|
       t.text :quick_commit1
       t.text :quick_commit2
-      t.belongs_to :workbook, null: false, foreign_key: true
+      t.belongs_to :week, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -1,4 +1,5 @@
 class Reflection < ApplicationRecord
-  belongs_to :workbook
+  belongs_to :week
+
 
 end

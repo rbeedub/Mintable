@@ -7,7 +7,7 @@ class CreateStakeholders < ActiveRecord::Migration[6.1]
       t.text :q4
       t.text :q5
       t.text :q6
-      t.belongs_to :workbook, null: false, foreign_key: true
+      t.belongs_to :week, null: false, foreign_key: true
 
       t.timestamps
     end

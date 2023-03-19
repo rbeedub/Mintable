@@ -3,29 +3,32 @@ import React, { useState } from "react";
 
 
 
-function ReflectionCard( {id, user, notes} ) {
+function ReflectionCard( {id, notes, user} ) {
+
 
    const [formData, setFormData] = useState(user)
-   const [reflection, setReflection] = useState([])
+   // const [reflection, setReflection] = useState([])
 
-   function handleFormSubmit(e){
-       e.preventDefault()
 
-       fetch(`/reflections/${id}`, {
-           method: 'PATCH',
-           headers: {
-               "Content-Type": "application/json"
-           },
-           body: JSON.stringify(formData)
-       })
-       .then(r => {
-           if(r.ok){
-               r.json().then(data => {
-                   setReflection(data)
-               })
-           }
-       })
-   }
+
+   // function handleFormSubmit(e){
+   //     e.preventDefault()
+
+   //     fetch(`/reflections/${id}`, {
+   //         method: 'PATCH',
+   //         headers: {
+   //             "Content-Type": "application/json"
+   //         },
+   //         body: JSON.stringify(formData)
+   //     })
+   //     .then(r => {
+   //         if(r.ok){
+   //             r.json().then(data => {
+   //                 setReflection(data)
+   //             })
+   //         }
+   //     })
+   // }
 
 
    function handleFormChange(e){
@@ -42,20 +45,22 @@ return (
 What might you do differently moving forward?
 </div>
 You answered...
-<div class="ui raised segment">
 
-   {notes}</div>
+<div class="ui raised segment">
+{notes}
+   </div>
 </div>
 
 <div class="ten wide column">
 What are your thoughts?
-<form class="ui reply form" onSubmit={handleFormSubmit} >
-    <div class="field" value={formData.notes} type="text" name="notes" placeholder="Notes" onChange={handleFormChange} >
+<form class="ui reply form"  >
+{/* onSubmit={handleFormSubmit} */}
+    {/* <div class="field" value={formData.notes} type="text" name="notes" placeholder="Notes" onChange={handleFormChange} >
    <textarea> </textarea>
     </div>
     <div class="ui blue labeled submit icon button">
       <i class="icon edit"></i> Submit Answer
-    </div>
+    </div> */}
   </form>
 
 </div>

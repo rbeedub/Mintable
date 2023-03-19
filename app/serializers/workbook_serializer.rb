@@ -1,5 +1,5 @@
 class WorkbookSerializer < ActiveModel::Serializer
-  attributes :id, :week
+  attributes :id
 
   has_many :reflections
   has_many :commits

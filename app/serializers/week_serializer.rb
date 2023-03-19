@@ -1,10 +1,10 @@
 class WeekSerializer < ActiveModel::Serializer
-  attributes :id, :date_time, :week
+  attributes :id, :week_number
 
-  # has_many :commits
-  # has_many :exercises
-  # has_many :motivations
-  # has_many :stakeholders
-  # has_many :reflections
+  has_many :commits
+  has_many :exercises
+  has_many :motivations
+  has_many :stakeholders
+  has_many :reflections
 
 end

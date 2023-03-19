@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Header from "./Header";
 import Home from "./Home";
 import Reflection from "./Reflection";
-import Motivation from "./Motivation";
+import MotivationMap from "./MotivationMap";
 import MotivationDrill from "./MotivationDrill";
 import Commit from "./Commit";
 import Stakeholders from "./Stakeholders";
@@ -19,6 +19,7 @@ function App() {
   const [events, setEvents] = useState([]);
   const [people, setPeople] = useState([]);
   const [workbook, setWorkbook] = useState([])
+  const [motivations, setMotivations] = useState()
  
 
 
@@ -26,27 +27,28 @@ function App() {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user));
+        r.json().then((user) => setUser(user), setMotivations(user?.motivations)
+        );
       }
     });
 
   }, []);
 
 
-  useEffect(() => {
-    // auto-login
-    if (user) {
-    fetch(`/workbooks/${user.workbook.id}`).then((r) => {
-      if (r.ok) {
-        r.json().then((res) => setWorkbook(res));
-      }
-    });
-  }
-  }, [user])
+console.log(motivations)
 
-  console.log(workbook)
+  // useEffect(() => {
+  //   // auto-login
+  //   if (user) {
+  //   fetch(`/workbooks/${user.workbook.week.id}`).then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((res) => setWorkbook(res));
+  //     }
+  //   });
+  // }
+  // }, [user])
 
-  const { commits, exercises, motivations, reflections, stakeholders, week } = workbook
+
 
 
   //   fetch("/workbook").then((r) => {
@@ -56,6 +58,11 @@ function App() {
   //   });
 
   // }, []);
+ 
+  function onFormSubmit(newSubmit) {
+    setMotivations(motivations.map((item) => item.id === newSubmit.id ? newSubmit : item));
+  }
+
 
   console.log(user)
 
@@ -73,10 +80,11 @@ function App() {
         <Route index element={<Home/>}  />
 
         <Route path="reflection" element={<Reflection
-        user={user} setUser={setUser} reflections={reflections}
+        user={user} setUser={setUser}
         />}/>
 
-        <Route path="motivation" element={<Motivation/>}/>
+        <Route path="motivation" element={<MotivationMap
+        user={user} setUser={setUser} onFormSubmit={onFormSubmit} motivations={motivations} />}/>
 
         <Route path="drill" element={<MotivationDrill/>}/>
 

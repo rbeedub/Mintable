@@ -44,7 +44,7 @@ function Home() {
     <NavLink to="/motivation">
       <a class="ui card" href="">
       <div class="content">
-        <div class="header">Motivation Exploration</div>
+        <div class="header">Motivation Map</div>
         <div class="meta">
           <span class="category">Week One</span>
         </div>
