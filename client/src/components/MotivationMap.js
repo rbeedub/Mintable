@@ -5,14 +5,14 @@ import DrainedByCard from "./DrainedByCard";
 import ContextCard from "./ContextCard";
 import WorkMotivationsCard from "./WorkMotivationsCard";
 
-function MotivationMap( {user, setUser, onFormSubmit, motivations} ) {
+function MotivationMap( {user, setUser, onFormSubmit, motivationList, setMotivationList} ) {
 
 
+console.log(motivationList)
 
 
-
-   const motivationResponse = user?.motivations.map(motivation  => {
-      return <PersonalValuesCard key={motivation.id} {...motivation} user={user} setUser={setUser} onFormSubmit={onFormSubmit} />
+   const motivationResponse = motivationList.map(motivation  => {
+      return <PersonalValuesCard key={motivation.id} {...motivation} user={user} setUser={setUser} onFormSubmit={onFormSubmit}  />
    }
    )
 

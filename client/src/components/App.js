@@ -18,8 +18,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [events, setEvents] = useState([]);
   const [people, setPeople] = useState([]);
-  const [workbook, setWorkbook] = useState([])
-  const [motivations, setMotivations] = useState()
+  const [motivationList, setMotivationList] = useState([])
  
 
 
@@ -27,15 +26,15 @@ function App() {
     // auto-login
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((user) => setUser(user), setMotivations(user?.motivations)
-        );
+        r.json().then((user)  => { 
+          setMotivationList(user.motivations);
+          console.log(user.motivations);
+          setUser(user)});
       }
     });
 
   }, []);
 
-
-console.log(motivations)
 
   // useEffect(() => {
   //   // auto-login
@@ -58,9 +57,10 @@ console.log(motivations)
   //   });
 
   // }, []);
- 
+
+
   function onFormSubmit(newSubmit) {
-    setMotivations(motivations.map((item) => item.id === newSubmit.id ? newSubmit : item));
+    setMotivationList([newSubmit])
   }
 
 
@@ -84,7 +84,7 @@ console.log(motivations)
         />}/>
 
         <Route path="motivation" element={<MotivationMap
-        user={user} setUser={setUser} onFormSubmit={onFormSubmit} motivations={motivations} />}/>
+        user={user} setUser={setUser} onFormSubmit={onFormSubmit} motivationList={motivationList} setMotivationList={motivationList} />}/>
 
         <Route path="drill" element={<MotivationDrill/>}/>
 
