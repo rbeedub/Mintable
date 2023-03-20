@@ -68,7 +68,13 @@ function App() {
         setMotivationList={motivationList}/>
         }/>
 
-        <Route path="drill" element={<MotivationDrill/>}/>
+        <Route path="drill" element={<MotivationDrill
+        onFormSubmit={onFormSubmit}
+        motivationList={motivationList}
+        setMotivationList={setMotivationList}
+        user={user}
+        setUser={setUser}
+        />}/>
 
         <Route path="commit" element={<Commit/>}/>
 

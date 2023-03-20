@@ -138,7 +138,15 @@ puts "Seeding motivation exercise..."
 Week.all.each do |u|
     Exercise.create(
         importance: Faker::Number.between(from: 1, to: 10),
+        importance2: Faker::Number.between(from: 1, to: 10),
+        importance3: Faker::Number.between(from: 1, to: 10),
+        importance4: Faker::Number.between(from: 1, to: 10),
+        importance5: Faker::Number.between(from: 1, to: 10),
         status:Faker::Number.between(from: 1, to: 10),
+        status2:Faker::Number.between(from: 1, to: 10),
+        status3:Faker::Number.between(from: 1, to: 10),
+        status4:Faker::Number.between(from: 1, to: 10),
+        status5:Faker::Number.between(from: 1, to: 10),
         my_thoughts:Faker::GreekPhilosophers.quote,
         next_steps: Faker::Lorem.paragraph(sentence_count: 2),
         week: u

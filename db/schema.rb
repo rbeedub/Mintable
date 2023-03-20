@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_18_213412) do
+ActiveRecord::Schema.define(version: 2023_03_20_005348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +38,14 @@ ActiveRecord::Schema.define(version: 2023_03_18_213412) do
     t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status2"
+    t.integer "status3"
+    t.integer "status4"
+    t.integer "status5"
+    t.integer "importance2"
+    t.integer "importance3"
+    t.integer "importance4"
+    t.integer "importance5"
     t.index ["week_id"], name: "index_exercises_on_week_id"
   end
 
