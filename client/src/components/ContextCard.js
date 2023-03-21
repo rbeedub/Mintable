@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from 'react';
 
 
-function ContextCard( { id,context,onFormSubmit } ) {
+function ContextCard( { id, context, onFormSubmit } ) {
 
     const initialData = {
         context:'',

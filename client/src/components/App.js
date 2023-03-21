@@ -19,6 +19,9 @@ function App() {
   const [events, setEvents] = useState([]);
   const [people, setPeople] = useState([]);
   const [motivationList, setMotivationList] = useState([])
+  const [exerciseList, setExerciseList] = useState([])
+  const [reflectionText, setReflectionText] = useState([])
+
  
 
 
@@ -27,8 +30,12 @@ function App() {
     fetch("/me").then((r) => {
       if (r.ok) {
         r.json().then((user)  => { 
+          setExerciseList(user.exercises);
+          console.log(user.exercises)
           setMotivationList(user.motivations);
           console.log(user.motivations);
+          setReflectionText(user.reflections);
+          console.log(user.reflections)
           setUser(user)});
       }
     });
@@ -40,8 +47,14 @@ function App() {
     setMotivationList([newSubmit])
   }
 
+  function onExerciseFormSubmit(newSubmit) {
+    setExerciseList([newSubmit])
+  }
 
-  console.log(user)
+  function onReflectionSubmit(newSubmit) {
+    setReflectionText([newSubmit])
+  }
+
 
   if (!user) return <LandingPage setUser = {setUser}/>;
 
@@ -57,7 +70,8 @@ function App() {
         <Route index element={<Home/>}  />
 
         <Route path="reflection" element={<Reflection
-        user={user} setUser={setUser}
+        user={user} setUser={setUser} setReflectionText={setReflectionText} reflectionText={reflectionText}
+        onReflectionSubmit={onReflectionSubmit}
         />}/>
 
         <Route path="motivation" element={<MotivationMap
@@ -69,9 +83,11 @@ function App() {
         }/>
 
         <Route path="drill" element={<MotivationDrill
-        onFormSubmit={onFormSubmit}
+        onExerciseFormSubmit={onExerciseFormSubmit}
         motivationList={motivationList}
         setMotivationList={setMotivationList}
+        exerciseList={exerciseList}
+        setExerciseList={setExerciseList}
         user={user}
         setUser={setUser}
         />}/>

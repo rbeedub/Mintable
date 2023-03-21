@@ -1,4 +1,5 @@
 class ReflectionsController < ApplicationController
+before_action :set_reflection, only: [:update, :show, :destroy]
 
     def index
         render json: Reflection.all, status: :ok
@@ -15,7 +16,7 @@ class ReflectionsController < ApplicationController
 
     def update
         @reflection.update!(reflection_params)
-        work_book = Workbook.find_by!(workbook_id: @workboook)
+        # work_book = Workbook.find_by!(workbook_id: @workboook)
         render json: @reflection, status: :accepted
     end
 
@@ -31,7 +32,7 @@ class ReflectionsController < ApplicationController
     end
 
     def reflection_params
-        params.permit(:notes)
+        params.permit(:notes, :id)
     end
 
 end

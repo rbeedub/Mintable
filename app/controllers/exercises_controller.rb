@@ -15,7 +15,7 @@ class ExercisesController < ApplicationController
 
     def update
         @exercise.update!(commit_params)
-        work_book = Workbook.find_by!(workbook_id: @workboook)
+        # work_book = Workbook.find_by!(workbook_id: @workboook)
         render json: @exercise, status: :accepted
     end
 

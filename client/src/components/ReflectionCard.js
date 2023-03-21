@@ -4,8 +4,9 @@ import TextEditor from "./TextEditor";
 
 
 
-function ReflectionCard( {id, notes, user} ) {
+function ReflectionCard( {id, notes, user, setReflectionText, onReflectionSubmit, reflectionText} ) {
 
+  console.log(reflectionText)
 
   const [formData, setFormData] = useState(user)
 
@@ -32,7 +33,12 @@ You answered...
 <div class="ten wide column">
 What are your thoughts?
 <form class="ui reply form"  >
-<TextEditor />
+<TextEditor 
+id={id}
+setReflectionText={setReflectionText}
+reflectionText={reflectionText}
+onReflectionSubmit={onReflectionSubmit}
+/>
   </form>
 
 </div>
