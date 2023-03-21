@@ -10,8 +10,8 @@ before_action :set_reflection, only: [:update, :show, :destroy]
     end
 
     def create
-        event = Reflection.create!(reflection_params)
-        render json: event, status: :created
+        reflection = Reflection.create!(reflection_params)
+        render json: reflection, status: :created
     end
 
     def update

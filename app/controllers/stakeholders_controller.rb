@@ -1,4 +1,5 @@
 class StakeholdersController < ApplicationController
+    before_action :set_stakeholder, only: [:update, :show, :destroy]
 
     def index
         render json: Stakeholder.all, status: :ok

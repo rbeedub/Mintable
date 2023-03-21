@@ -1,4 +1,5 @@
 class ExercisesController < ApplicationController
+    before_action :set_exercise, only: [:update, :show, :destroy]
 
     def index
         render json: Exercise.all, status: :ok

@@ -21,6 +21,7 @@ function App() {
   const [motivationList, setMotivationList] = useState([])
   const [exerciseList, setExerciseList] = useState([])
   const [reflectionText, setReflectionText] = useState([])
+  const [commitText, setCommitText] = useState([])
 
  
 
@@ -31,11 +32,13 @@ function App() {
       if (r.ok) {
         r.json().then((user)  => { 
           setExerciseList(user.exercises);
-          console.log(user.exercises)
+          console.log("exercises", user.exercises)
           setMotivationList(user.motivations);
-          console.log(user.motivations);
+          console.log("motivations", user.motivations);
           setReflectionText(user.reflections);
-          console.log(user.reflections)
+          console.log("reflections", user.reflections)
+          setCommitText(user.commits)
+          console.log("commits", user.commits)
           setUser(user)});
       }
     });
@@ -53,6 +56,10 @@ function App() {
 
   function onReflectionSubmit(newSubmit) {
     setReflectionText([newSubmit])
+  }
+
+  function onCommitSubmit(newSubmit) {
+    setCommitText([newSubmit])
   }
 
 
@@ -92,7 +99,12 @@ function App() {
         setUser={setUser}
         />}/>
 
-        <Route path="commit" element={<Commit/>}/>
+        <Route path="commit" element={<Commit
+        onCommitSubmit={onCommitSubmit}
+        setCommitText={setCommitText}
+        commitText={commitText}
+        user={user}
+        />}/>
 
         <Route path="stakeholders" element={<Stakeholders/>}/>
         

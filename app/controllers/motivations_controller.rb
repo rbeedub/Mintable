@@ -1,6 +1,6 @@
 class MotivationsController < ApplicationController
 
-    before_action :set_motivation
+    before_action :set_motivation, only: [:update, :show, :destroy]
 
     def index
         render json: Motivation.all, status: :ok

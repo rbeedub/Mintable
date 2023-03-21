@@ -50,7 +50,7 @@ function handleSubmitForm(e) {
     <tr>
     
       <th>Out of 10, how important is this to you (1 being the least important, and 10 being the most important) </th>
-      <th>Status in My Role: (1) Red / (2) Yellow / (3) Green</th>
+      <th>How much of your time and energy goes here in any given day or week? (1 being very little, and 10 being a lot)</th>
     </tr>
   </thead>
   <tbody>
@@ -59,7 +59,7 @@ function handleSubmitForm(e) {
       <td>1. {importance}  / 10
       <div class="ui form">
         <div class="field">
-            <input value={formData.importance} type="text" name="importance" onChange={handleFormChange}/> 
+            <input value={formData.importance} type="text" name="importance" onChange={handleFormChange}/>
         </div>
         </div>
       </td>

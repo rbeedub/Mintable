@@ -1,6 +1,7 @@
 import React from "react";
 import MiniMotivationCard from "./MiniMotivationCard";
 import MotivationExerciseTable from "./MotivationExerciseTable";
+import MotivationResponseCards from "./MotivationResponseCards";
 
 function MotivationDrill( {user, onExerciseFormSubmit, motivationList, exerciseList, setExerciseList} ) {
 
@@ -20,12 +21,22 @@ return (
 <>
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="three wide pink column">{motivationsResponse}</div>
-    <div class="nine wide grey column">{motivationExTbl}
-    </div>
-    <div class="two wide pink column"></div>
- </div>
+   <div class="two wide pink column"></div>
+   <div class="three wide pink column">{motivationsResponse}</div>
+   <div class="nine wide grey column">{motivationExTbl}
+   </div>
+   <div class="two wide pink column"></div>
+   <div class="one wide grey column"></div>
+   <div class="fourteen wide column">
+   <MotivationResponseCards
+   motivationList={motivationList}
+   exerciseList={exerciseList}
+   user={user}
+   />
+
+   </div>
+   <div class="one wide grey column"></div>
+</div>
 </>
 )
 }

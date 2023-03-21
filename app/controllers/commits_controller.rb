@@ -1,4 +1,5 @@
 class CommitsController < ApplicationController
+    before_action :set_commit, only: [:update, :show, :destroy]
 
     def index
         render json: Commit.all, status: :ok
@@ -9,14 +10,13 @@ class CommitsController < ApplicationController
     end
 
     def create
-        commit = Commit.create!(commit_params)
-        # SkillLevel.create!(skillable: event, skill_level: params[:skill_level])
+        @commit.create!(commit_params)
         render json: commit, status: :created
     end
 
     def update
         @commit.update!(commit_params)
-        work_book = Workbook.find_by!(workbook_id: @workboook)
+        # work_book = Workbook.find_by!(workbook_id: @workboook)
         render json: @commit, status: :accepted
     end
 
@@ -32,7 +32,7 @@ class CommitsController < ApplicationController
     end
 
     def commit_params
-        params.permit(:quick_commit1, :quick_commit2)
+        params.permit(:quick_commit1, :quick_commit2, :id)
     end
 
 end
