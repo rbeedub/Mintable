@@ -16,8 +16,6 @@ import EditProfile from "./EditProfile";
 function App() {
 
   const [user, setUser] = useState(null);
-  const [events, setEvents] = useState([]);
-  const [people, setPeople] = useState([]);
   const [motivationList, setMotivationList] = useState([])
   const [exerciseList, setExerciseList] = useState([])
   const [reflectionText, setReflectionText] = useState([])
@@ -55,6 +53,7 @@ function App() {
   }
 
   function onReflectionSubmit(newSubmit) {
+    console.log(newSubmit)
     setReflectionText([newSubmit])
   }
 

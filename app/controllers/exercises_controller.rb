@@ -10,12 +10,12 @@ class ExercisesController < ApplicationController
     end
 
     def create
-        exercise = Exercise.create!(exercise_params)
+        @exercise.create!(exercise_params)
         render json: exercise, status: :created
     end
 
     def update
-        @exercise.update!(commit_params)
+        @exercise.update(exercise_params)
         # work_book = Workbook.find_by!(workbook_id: @workboook)
         render json: @exercise, status: :accepted
     end
@@ -32,7 +32,7 @@ class ExercisesController < ApplicationController
     end
 
     def exercise_params
-        params.permit(:quick_commit1, :quick_commit2)
+        params.permit(:id, :importance, :importance2, :importance2, :importance3, :importance4, :importance5, :my_thoughts, :next_steps, :status, :status2, :status3, :status4, :status5)
     end
 
 end

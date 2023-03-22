@@ -7,7 +7,7 @@ console.log(reflectionText)
 
 
 
-const reflectionResponse = user?.reflections.map(reflection  => {
+const reflectionResponse = reflectionText.map(reflection  => {
    return <ReflectionCard key={reflection.id} {...reflection} user={user} setReflectionText={setReflectionText} reflectionText={reflectionText} onReflectionSubmit={onReflectionSubmit} />
 }
 )

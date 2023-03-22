@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_20_005348) do
+ActiveRecord::Schema.define(version: 2023_03_21_211200) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -95,6 +95,24 @@ ActiveRecord::Schema.define(version: 2023_03_20_005348) do
     t.bigint "week_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "s2q1"
+    t.text "s2q2"
+    t.text "s2q3"
+    t.text "s2q4"
+    t.text "s2q5"
+    t.text "s2q6"
+    t.text "s3q1"
+    t.text "s3q2"
+    t.text "s3q3"
+    t.text "s3q4"
+    t.text "s3q5"
+    t.text "s3q6"
+    t.text "s4q1"
+    t.text "s4q2"
+    t.text "s4q3"
+    t.text "s4q4"
+    t.text "s4q5"
+    t.text "s4q6"
     t.index ["week_id"], name: "index_stakeholders_on_week_id"
   end
 

@@ -59,7 +59,14 @@ function TextEditor( {id, setReflectionText, reflectionText, onReflectionSubmit}
 
 
 // function MyComponent({initialValue}) {
-  const [dirty, setDirty] = useState(false);
+  // const [dirty, setDirty] = useState(false);
+
+  const initialData = {
+    notes:'',
+     }
+  
+  const [formData, setFormData] = useState(initialData)
+
 
   function handleFormChange(e) {
   const {name, value} = e.target;
@@ -67,13 +74,8 @@ function TextEditor( {id, setReflectionText, reflectionText, onReflectionSubmit}
   setFormData({...formData, [name]: value})
   }
 
-const initialData = {
-  notes:'',
-   }
 
-const [formData, setFormData] = useState(initialData)
-
-  useEffect(() => setDirty(false), [setReflectionText]);
+  // useEffect(() => setDirty(false), [setReflectionText]);
   
 
 function handleSubmitForm(e) {
@@ -97,13 +99,12 @@ function handleSubmitForm(e) {
         apiKey="rhoelxuz68rgijapyo6tg71n77d1jmxxxb2hzugo0trdr7hn"
         plugins="wordcount"
         name="notes"
+        value={formData.notes}
         initialValue=''
-        onDirty={() => setDirty(true)}
-        onChange={handleFormChange}
-        onClick={handleSubmitForm}
+        onEditorChange={(newValue, editor) => setFormData({...formData, notes: newValue}) }
+        // onClick={handleSubmitForm}
       />
-      <button class="ui button" disabled={!dirty}>Save</button>
-      {dirty && <p>You have unsaved content!</p>}
+      <button class="ui button" onClick={handleSubmitForm} >Save</button>
     </>
   );
 }

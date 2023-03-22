@@ -26,7 +26,9 @@ What might you do differently moving forward?
 You answered...
 
 <div class="ui raised segment">
-{notes}
+<div dangerouslySetInnerHTML={{__html:notes}} />
+{/* 
+{notes} */}
 </div>
 </div>
 

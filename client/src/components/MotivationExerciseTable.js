@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import MiniMotivationCard from "./MiniMotivationCard";
 
 
-function MotivationExerciseTable( {id, importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5, onFormSubmit, motivationList} ) {
-    
+function MotivationExerciseTable( {id, importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5, onExerciseFormSubmit} ) {
 
     const initialData = {
        importance:'',
@@ -30,7 +29,7 @@ function handleFormChange(e) {
 function handleSubmitForm(e) {
     e.preventDefault()
 
-    fetch(`/motivations/${id}`, {
+    fetch(`/exercises/${id}`, {
         method: 'PATCH',
         headers: {
             "Content-Type": "application/json"
@@ -38,116 +37,113 @@ function handleSubmitForm(e) {
         body: JSON.stringify(formData)
     })
     .then((res) => res.json())
-    .then(onFormSubmit)
+    .then(onExerciseFormSubmit)
     .then(setFormData(initialData))
 }
 
 
     return (
-<form >
-<table class="ui selectable celled table">
-  <thead>
-    <tr>
-    
-      <th>Out of 10, how important is this to you (1 being the least important, and 10 being the most important) </th>
-      <th>How much of your time and energy goes here in any given day or week? (1 being very little, and 10 being a lot)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
 
-      <td>1. {importance}  / 10
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.importance} type="text" name="importance" onChange={handleFormChange}/>
-        </div>
-        </div>
-      </td>
-      <td>1. {status}
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.status} type="text" name="status" onChange={handleFormChange} /> 
-        </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-   
-      <td>2.{importance2}  / 10
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.importance2}  type="text" name="importance2" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-      <td>2. {status2}
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.status2} type="text" name="status2" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-   
-      <td>3. {importance3}  / 10
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.importance3} type="text" name="importance3" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-      <td>3. {status3}
-      <div class="ui form">
-        <div class="field">
-            <input  value={formData.status3} type="text" name="status3" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-    
-      <td>4. {importance4}  / 10
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.importance4} type="text" name="importance4" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-      <td>4. {status4}
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.status4} type="text" name="status4" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
+<>
 
-      <td>5. {importance5}  / 10
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.importance5} type="text" name="importance5" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-      <td>5. {status5}
-      <div class="ui form">
-        <div class="field">
-            <input value={formData.status5} type="text" name="status5" onChange={handleFormChange}/> 
-        </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
- 
-      <td></td>
-      <td><button class="ui button">Submit</button></td>
-    </tr>
 
-  </tbody>
-</table>
-</form>
+<form class="ui form"  onSubmit={handleSubmitForm} >
+        <div class="ui form">
+            <div class="field">
+                <label>List what energizes you</label>
+                <input value={formData.energized_by1} type="text" name="energized_by1" placeholder="1" onChange={handleFormChange}/>
+            </div>
+            <div class="field">
+
+                <input value={formData.energized_by2} type="text" name="energized_by2" placeholder="2" onChange={handleFormChange}/>
+            </div>
+            <div class="field">
+
+                <input value={formData.energized_by3} type="text" name="energized_by3" placeholder="3" onChange={handleFormChange}/>
+            </div>
+            <div class="field">
+
+                <input value={formData.energized_by4} type="text" name="energized_by4" placeholder="4" onChange={handleFormChange}/>
+            </div>
+            <div class="field">
+
+                <input value={formData.energized_by5} type="text" name="energized_by5" placeholder="5" onChange={handleFormChange}/>
+            </div>
+            <button class="ui button">Submit</button>
+            </div>
+            </form>
+
+
+
+
+
+
+
+
+<div class="column">
+  <div>
+  <p>How important is this to you? Look at each of these 5 things and assign them the percentage the corresponds to how important this is to you. This column should total 100% </p>
+  <br></br>
+  <br></br>
+  </div>
+</div>
+  <div class="column">
+
+
+
+  <form class="ui form" onSubmit={handleSubmitForm}>
+    <div class="ui form" >
+    <div class="field">
+      <input value={formData.importance} name="importance" placeholder="% of 100" type="text" onChange={handleFormChange} />
+    </div>
+    <div class="field">
+
+      <input value={formData.importance2} name="importance2" placeholder="% of 100" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+
+      <input value={formData.importance3} name="importance3" placeholder="% of 100" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+      <input value={formData.importance4} name="importance4" placeholder="% of 100" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+
+      <input value={formData.importance5} name="importance5" placeholder="% of 100" type="text" onChange={handleFormChange}/>
+    </div>
+    <br></br>
+      <br></br>
+
+      <p>On a scale of 1 - 10, 1 being the least and 10 being the most, how much time, eneregy and effort are you spending on each of things that motivates you?</p>
+
+    <div class="field">
+    <input value={formData.status} name="status" placeholder="#1 movtivation" type="text" onChange={handleFormChange} />
+    </div>
+    <div class="field">
+
+      <input value={formData.status1} name="status1" placeholder="#2 movtivation" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+
+      <input value={formData.status3} name="status3" placeholder="#3 movtivation" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+
+      <input value={formData.status4} name="status4" placeholder="#4 movtivation" type="text" onChange={handleFormChange}/>
+    </div>
+    <div class="field">
+
+      <input value={formData.status5} name="status5" placeholder="#5 movtivation" type="text" onChange={handleFormChange}/>
+    </div>
+
+    <button class="ui button">Submit</button>
+
+  </div>
+  </form>
+  </div>
+
+</>
+
     )
 
 }

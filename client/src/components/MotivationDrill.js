@@ -8,7 +8,7 @@ function MotivationDrill( {user, onExerciseFormSubmit, motivationList, exerciseL
    console.log(motivationList)
 
    const motivationExTbl = exerciseList.map(exercise  => {
-      return <MotivationExerciseTable key={exercise.id} {...exercise} user={user} onFormSubmit={onExerciseFormSubmit} />
+      return <MotivationExerciseTable key={exercise.id} {...exercise} user={user} onExerciseFormSubmit={onExerciseFormSubmit} />
    }
    )
 
@@ -19,14 +19,14 @@ function MotivationDrill( {user, onExerciseFormSubmit, motivationList, exerciseL
 
 return (
 <>
-
 <div class="ui grid">
    <div class="two wide pink column"></div>
    <div class="three wide pink column">{motivationsResponse}</div>
-   <div class="nine wide grey column">{motivationExTbl}
+   <div class="nine wide grey column">
+      {motivationExTbl}
    </div>
    <div class="two wide pink column"></div>
-   <div class="one wide grey column"></div>
+   <div class="one wide green column"></div>
    <div class="fourteen wide column">
    <MotivationResponseCards
    motivationList={motivationList}
@@ -35,7 +35,7 @@ return (
    />
 
    </div>
-   <div class="one wide grey column"></div>
+   <div class="one wide green column"></div>
 </div>
 </>
 )

@@ -137,11 +137,11 @@ end
 puts "Seeding motivation exercise..."
 Week.all.each do |u|
     Exercise.create(
-        importance: Faker::Number.between(from: 1, to: 10),
-        importance2: Faker::Number.between(from: 1, to: 10),
-        importance3: Faker::Number.between(from: 1, to: 10),
-        importance4: Faker::Number.between(from: 1, to: 10),
-        importance5: Faker::Number.between(from: 1, to: 10),
+        importance: 15,
+        importance2: 10,
+        importance3: 30,
+        importance4: 40,
+        importance5: 5,
         status: Faker::Number.between(from: 1, to: 10),
         status2: Faker::Number.between(from: 1, to: 10),
         status3: Faker::Number.between(from: 1, to: 10),
@@ -176,12 +176,30 @@ end
 puts "Seeding stakeholders...."
 Week.all.each do |u|
     Stakeholder.create(
-        q1: Faker::Lorem.paragraph(sentence_count: 1),
+        q1: Faker::FunnyName.two_word_name,
         q2: Faker::Lorem.paragraph(sentence_count: 1),
         q3: Faker::Lorem.paragraph(sentence_count: 1),
         q4: Faker::Lorem.paragraph(sentence_count: 1),
         q5: Faker::Lorem.paragraph(sentence_count: 1),
         q6: Faker::Lorem.paragraph(sentence_count: 1),
+        s2q1: Faker::FunnyName.two_word_name,
+        s2q2: Faker::Lorem.paragraph(sentence_count: 1),
+        s2q3: Faker::Lorem.paragraph(sentence_count: 1),
+        s2q4: Faker::Lorem.paragraph(sentence_count: 1),
+        s2q5: Faker::Lorem.paragraph(sentence_count: 1),
+        s2q6: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q1: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q2: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q3: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q4: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q5: Faker::Lorem.paragraph(sentence_count: 1),
+        s3q6: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q1: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q2: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q3: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q4: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q5: Faker::Lorem.paragraph(sentence_count: 1),
+        s4q6: Faker::Lorem.paragraph(sentence_count: 1),
         week: u
     )
 end

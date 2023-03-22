@@ -1,29 +1,41 @@
 import React from "react";
 
-function MiniMotivCard( { user, motivations1, motivations2, motivations3, motivations4, motivations5, importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5 } ) {
+function MiniMotivCard( { user, motivations1, importance, status} ) {
 
-    console.log(motivations1)
+    console.log(importance)
 
 
 return (
 <>
-
-
-<div class="ui fluid card">
-    <div class="content">
-    <div class="ui small center aligned header">
-    <div class="ui statistics">
-  <div class="statistic">
-    <div class="value">
- 
-    </div>
-    <div class="label">
-      /10 importance
+<div class="ui card">
+  <div class="centered content">
+    <div class="ui center aligned header">Motivation 1</div>
+  </div>
+  <div class="uicontent">
+    <div class="ui small feed">
+      <div class="event">
+        <div class="content">
+        {motivations1}
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+          <div class="content">
+          {importance} / 10 importance to you
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="content">
+          <div class="summary">
+             {status} / 10 time and energy you spend dedicated to this
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-    </div>
-    </div>
-</div>
 </div>
 </>
 )

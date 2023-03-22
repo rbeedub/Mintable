@@ -44,9 +44,8 @@ return (
 </div>
 <div class="ui segments">
 <div class="ui horizontal segments">
-<div class="ui compact segment">
-    <p>How will you ensure your manager has</p><br></br>
-    <p>visibility into your motivations?</p>
+<div class="ui segment">
+    <p>How will you ensure your manager has visibility into your motivations?</p>
 
 
 {/* <h3 class="ui header">How will you ensure your manager has visibility into your motivations?</h3>

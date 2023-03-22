@@ -9,7 +9,7 @@ function Home() {
 
 <div class="ui grid">
 
-  <div class="three wide pink column"></div>
+  <div class="three wide column"></div>
   <div class="ten wide column">
 
   <div class="ui basic segments">
@@ -125,15 +125,15 @@ function Home() {
 </div>
 
 
-  <div class="three wide pink column"></div>
+  <div class="three wide  column"></div>
 </div>
 <div class="ui hidden divider"></div>
 <div class="ui hidden divider"></div>
 
 <div class="ui grid">
   <div class="four column row">
-    <div class="left floated pink column"></div>
-    <div class="right floated pink column"></div>
+    <div class="left floated  column"></div>
+    <div class="right floated  column"></div>
   </div>
   <div class="ui hidden divider"></div>
   <div class="ui hidden divider"></div>
@@ -141,7 +141,7 @@ function Home() {
   <div class="row">
   <div class="ui hidden divider"></div>
 
-    <div class="ten wide pink column"></div>
+    <div class="ten wide column"></div>
     <div class="six wide column">
     <div>
     <div class="ui center aligned segment">
