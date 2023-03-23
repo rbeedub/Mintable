@@ -3,17 +3,17 @@ import MiniMotivationCard from "./MiniMotivationCard";
 import MotivationExerciseTable from "./MotivationExerciseTable";
 import MotivationResponseCards from "./MotivationResponseCards";
 
-function MotivationDrill( {user, onExerciseFormSubmit, motivationList, exerciseList, setExerciseList} ) {
+function MotivationDrill( { onExerciseFormSubmit, motivationList, exerciseList, setExerciseList} ) {
 
    console.log(motivationList)
 
    const motivationExTbl = exerciseList.map(exercise  => {
-      return <MotivationExerciseTable key={exercise.id} {...exercise} user={user} onExerciseFormSubmit={onExerciseFormSubmit} />
+      return <MotivationExerciseTable key={exercise.id} {...exercise}  onExerciseFormSubmit={onExerciseFormSubmit} />
    }
    )
 
    const motivationsResponse = motivationList.map(motivation  => {
-      return <MiniMotivationCard key={motivation.id} {...motivation} user={user} />
+      return <MiniMotivationCard key={motivation.id} {...motivation}  />
    }
    )
 
@@ -31,7 +31,7 @@ return (
    <MotivationResponseCards
    motivationList={motivationList}
    exerciseList={exerciseList}
-   user={user}
+
    />
 
    </div>

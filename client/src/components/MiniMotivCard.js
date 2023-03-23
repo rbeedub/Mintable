@@ -1,6 +1,6 @@
 import React from "react";
 
-function MiniMotivCard( { user, motivations1, motivations2, motivations3, motivations4, motivations5 ,importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5} ) {
+function MiniMotivCard( { motivations1, motivations2, motivations3, motivations4, motivations5 ,importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5} ) {
 
     console.log(importance)
 
@@ -25,7 +25,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance} % important to you
+          {importance} % importan to you
           </div>
           </div>
         </div>

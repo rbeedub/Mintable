@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom'
 import ErrorMsgList from "./ErrorMsgList";
 import ProfileUpdatedMsg from "./ProfileUpdatedMsg";
+import { UserContext } from "../context/user";
 
 
-function EditProfileForm( {user, setUser} ) {
+
+function EditProfileForm() {
 
     console.log("profile", user)
 
+    const [user, setUser] = useContext(UserContext)
     const [formData, setFormData] = useState(user)
     const [errors, setErrors] = useState([])
     const [profileUpdated, setProfileUpdated] = useState(false)

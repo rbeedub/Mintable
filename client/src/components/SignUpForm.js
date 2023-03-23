@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { UserContext } from "../context/user";
+import { useContext } from "react"; 
 
-function SignUpForm({ setUser, setErrors }) {
+function SignUpForm({ setErrors }) {
+    
+const [user, setUser] = useContext(UserContext) 
+
     const initialData = {
         name:'',
         username: '',

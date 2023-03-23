@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import ReflectionCard from "./ReflectionCard";
 
-function Reflection( { user, setReflectionText, reflectionText, onReflectionSubmit } ) {
+function Reflection( { setReflectionText, reflectionText, onReflectionSubmit } ) {
 // const [reflection, setReflection] = useState([])
 console.log(reflectionText)
 
 
 
 const reflectionResponse = reflectionText.map(reflection  => {
-   return <ReflectionCard key={reflection.id} {...reflection} user={user} setReflectionText={setReflectionText} reflectionText={reflectionText} onReflectionSubmit={onReflectionSubmit} />
+   return <ReflectionCard key={reflection.id} {...reflection} setReflectionText={setReflectionText} reflectionText={reflectionText} onReflectionSubmit={onReflectionSubmit} />
 }
 )
 

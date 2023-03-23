@@ -1,11 +1,14 @@
 
 import React, { useState } from 'react'
+import { UserContext } from "../context/user";
+import { useContext } from "react";
 import ErrorMsgList from './ErrorMsgList'
 import SignIn from './SignIn';
 import SignUpForm from './SignUpForm';
 
-function SignInPage ({ setUser }){
-
+function SignInPage (){
+    
+    const [user, setUser] = useContext(UserContext)
     const [showLogin, setShowLogin] = useState(true);
     const [errors, setErrors] = useState([])
 
@@ -18,11 +21,11 @@ Already a Member?
 
         <div>
             {showLogin ? <>
-                <SignIn setUser = {setUser} setErrors={setErrors}/> 
+                <SignIn  setErrors={setErrors}/> 
                 <button class="ui button" onClick={() => setShowLogin(!showLogin)}>Show Sign up</button>
             </>
             : <>
-                <SignUpForm setUser={setUser} setErrors={setErrors}/> 
+                <SignUpForm setErrors={setErrors}/> 
                 <button class="ui button" onClick={() => setShowLogin(!showLogin)}>Show Log in</button>
             </>
             }

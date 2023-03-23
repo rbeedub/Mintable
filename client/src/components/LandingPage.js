@@ -1,13 +1,12 @@
 import React from "react";
+import { UserContext } from "../context/user";
+import { useContext } from "react"; 
 import SignInPage from "./SignInPage";
 
-function LandingPage( {setUser} ) {
+function LandingPage() {
 return (
 <>
-
-<SignInPage
-setUser = {setUser} 
-/>
+<SignInPage/>
 </>
 )
 }

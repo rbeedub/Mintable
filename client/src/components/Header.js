@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "./NavBar";
 import { NavLink } from "react-router-dom"
 
-function Header( { user, setUser} ) {
+function Header() {
 return (
 <>
     <div class="ui secondary pointing menu">
@@ -14,9 +14,7 @@ return (
     </a>
     <div class="right menu">
         <a class="ui item active">
-        <NavBar
-    user={user}
-    setUser={setUser}/>
+        <NavBar/>
         </a>
     </div>
     </div>

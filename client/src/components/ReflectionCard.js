@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import TextEditor from "./TextEditor";
+import { UserContext } from "../context/user";
+import { useContext } from "react";
 
 
 
 
-function ReflectionCard( {id, notes, user, setReflectionText, onReflectionSubmit, reflectionText} ) {
+function ReflectionCard( {id, notes, setReflectionText, onReflectionSubmit, reflectionText} ) {
 
   console.log(reflectionText)
 
+  const [user, setUser] = useContext(UserContext)
+  
   const [formData, setFormData] = useState(user)
 
   function handleFormChange(e){

@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { Navigate, Route, Routes, Link } from "react-router-dom";
 import { useState } from 'react'
+import { UserContext } from '../context/user';
 import Header from "./Header";
 import Home from "./Home";
 import Reflection from "./Reflection";
@@ -15,14 +16,17 @@ import EditProfile from "./EditProfile";
 
 function App() {
 
-  const [user, setUser] = useState(null);
+  // const [user, setUser] = useState(null);
+
+  const [user, setUser] = useContext(UserContext)
+
   const [motivationList, setMotivationList] = useState([])
   const [exerciseList, setExerciseList] = useState([])
   const [reflectionText, setReflectionText] = useState([])
   const [commitText, setCommitText] = useState([])
   const [stakeholderText, setStakeholderText] = useState([])
 
- 
+ console.log("user", user)
 
 
   useEffect(() => {
@@ -70,12 +74,11 @@ function App() {
 
 
 
-  if (!user) return <LandingPage setUser = {setUser}/>;
+  if (!user) return <LandingPage/>;
 
   return (
   <>
-    <Header
-    user={user} setUser={setUser}/>
+    <Header/>
 
   <main>
 
@@ -84,13 +87,12 @@ function App() {
         <Route index element={<Home/>}  />
 
         <Route path="reflection" element={<Reflection
-        user={user} setUser={setUser} setReflectionText={setReflectionText} reflectionText={reflectionText}
+        setReflectionText={setReflectionText}
+        reflectionText={reflectionText}
         onReflectionSubmit={onReflectionSubmit}
         />}/>
 
         <Route path="motivation" element={<MotivationMap
-        user={user}
-        setUser={setUser}
         onFormSubmit={onFormSubmit}
         motivationList={motivationList}
         setMotivationList={motivationList}/>
@@ -102,27 +104,21 @@ function App() {
         setMotivationList={setMotivationList}
         exerciseList={exerciseList}
         setExerciseList={setExerciseList}
-        user={user}
-        setUser={setUser}
+   
         />}/>
 
         <Route path="commit" element={<Commit
         onCommitSubmit={onCommitSubmit}
         setCommitText={setCommitText}
         commitText={commitText}
-        user={user}
         />}/>
 
         <Route path="stakeholders" element={<Stakeholders
         stakeholderText={stakeholderText}
-        user={user}
         onStakeholderSubmit={onStakeholderSubmit}
         />}/>
         
-        <Route exact path="edit-profile" element={<EditProfile
-        user={user}
-        setUser={setUser}
-        />}/>
+        <Route exact path="edit-profile" element={<EditProfile/>}/>
     </Routes>
 </main>
 </>

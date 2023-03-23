@@ -1,13 +1,10 @@
 import React from "react";
 import EditProfileForm from "./EditProfileForm";
 
-function EditProfile( { user, setUser} ) {
+function EditProfile() {
 return (
 <>
-<EditProfileForm
-user={user}
-setUser={setUser}
-/>
+<EditProfileForm/>
 </>
 )
 }

@@ -3,6 +3,8 @@ import { useState } from 'react';
 
 function PersonalValuesCard( {id, personal_values1, personal_values2, personal_values3, personal_values4, personal_values5,onFormSubmit } ) {
 
+    console.log("id", id)
+
     const initialData = {
         personal_values1:'',
         personal_values2:'',
