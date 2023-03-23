@@ -1,7 +1,7 @@
 class Workbook < ApplicationRecord
     belongs_to :user
     has_many :cohorts, through: :users
-    has_many :weeks
+    has_many :weeks, dependent: :destroy
 
 
     has_many :motivations 

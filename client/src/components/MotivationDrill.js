@@ -20,13 +20,13 @@ function MotivationDrill( {user, onExerciseFormSubmit, motivationList, exerciseL
 return (
 <>
 <div class="ui grid">
-   <div class="two wide pink column"></div>
-   <div class="three wide pink column">{motivationsResponse}</div>
-   <div class="nine wide grey column">
+   <div class="two wide  column"></div>
+   <div class="three wide  column">{motivationsResponse}</div>
+   <div class="nine wide  column">
       {motivationExTbl}
    </div>
-   <div class="two wide pink column"></div>
-   <div class="one wide green column"></div>
+   <div class="two wide  column"></div>
+   <div class="one wide  column"></div>
    <div class="fourteen wide column">
    <MotivationResponseCards
    motivationList={motivationList}
@@ -35,7 +35,7 @@ return (
    />
 
    </div>
-   <div class="one wide green column"></div>
+   <div class="one wide  column"></div>
 </div>
 </>
 )

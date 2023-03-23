@@ -38,11 +38,11 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="twelve wide grey column">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
     <div class="column">
     <div class="ui three column grid">
-        <div class="teal column">
+        <div class="column">
         <label>My Work Motivations</label>
 
             <div class="ui list">
@@ -69,7 +69,7 @@ return (
                 </div>
         </div>
 
-        <div class="orange column">
+        <div class="column">
         <form class="ui form" onSubmit={handleSubmitForm} >
         <div class="ui form">
             <div class="field">
@@ -98,7 +98,7 @@ return (
 
 
         </div>
-        <div class="green column">
+        <div class="column">
             <p>Now, it's time to put it all together. Imagine you feeling at your professional best, energized, living by your personal values, and incorporating any important context. 
 
 What motivates you professionally? Write down each unique motivation - focusing only on your top four for the purposes of this exercise. If you feel you have more, you can always add them afterward. 
@@ -110,7 +110,7 @@ Examples - compensation, impact of work, people - talent, people - social, caree
     </div>
     </div>
     </div>
-    <div class="two wide pink column"></div>
+    <div class="two wide column"></div>
  </div>
 
 )

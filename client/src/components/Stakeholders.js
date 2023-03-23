@@ -1,9 +1,16 @@
 import React from "react";
+import StakeholderFormPage from "./StakeholderFormPage";
 
-function Stakeholders() {
+function Stakeholders( { stakeholderText, user, onStakeholderSubmit }) {
+
+    const stakeholderResponse = stakeholderText.map(stakeholder  => {
+        return <StakeholderFormPage key={stakeholder.id} {...stakeholder} user={user} onStakeholderSubmit={onStakeholderSubmit} />
+     }
+     )
 return (
 <>
-Stakeholder Map activity will go here
+
+{stakeholderResponse}
 </>
 )
 }

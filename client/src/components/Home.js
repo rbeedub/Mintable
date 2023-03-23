@@ -131,6 +131,7 @@ function Home() {
 <div class="ui hidden divider"></div>
 
 <div class="ui grid">
+  
   <div class="four column row">
     <div class="left floated  column"></div>
     <div class="right floated  column"></div>
@@ -141,8 +142,7 @@ function Home() {
   <div class="row">
   <div class="ui hidden divider"></div>
 
-    <div class="ten wide column"></div>
-    <div class="six wide column">
+    <div class="ten wide column">
     <div>
     <div class="ui center aligned segment">
 
@@ -222,8 +222,12 @@ function Home() {
 </div>
     </div>
     </div>
+
+    </div>
+    <div class="three wide column">
+  
 </div>
-<div class="five wide redcolumn"></div>
+
   </div>
 </div>
 </>

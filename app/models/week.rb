@@ -1,9 +1,9 @@
 class Week < ApplicationRecord
-  has_many :commits
-  has_many :exercises
-  has_many :motivations
-  has_many :stakeholders
-  has_many :reflections
+  has_many :commits, dependent: :destroy
+  has_many :exercises, dependent: :destroy
+  has_many :motivations, dependent: :destroy
+  has_many :stakeholders, dependent: :destroy
+  has_many :reflections, dependent: :destroy
   
   belongs_to :workbook
 end

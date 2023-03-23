@@ -20,6 +20,7 @@ function App() {
   const [exerciseList, setExerciseList] = useState([])
   const [reflectionText, setReflectionText] = useState([])
   const [commitText, setCommitText] = useState([])
+  const [stakeholderText, setStakeholderText] = useState([])
 
  
 
@@ -37,6 +38,8 @@ function App() {
           console.log("reflections", user.reflections)
           setCommitText(user.commits)
           console.log("commits", user.commits)
+          setStakeholderText(user.stakeholders) 
+          console.log("stakeholders", user.stakeholders)
           setUser(user)});
       }
     });
@@ -60,6 +63,11 @@ function App() {
   function onCommitSubmit(newSubmit) {
     setCommitText([newSubmit])
   }
+
+  function onStakeholderSubmit(newSubmit) {
+    setStakeholderText([newSubmit])
+  }
+
 
 
   if (!user) return <LandingPage setUser = {setUser}/>;
@@ -105,7 +113,11 @@ function App() {
         user={user}
         />}/>
 
-        <Route path="stakeholders" element={<Stakeholders/>}/>
+        <Route path="stakeholders" element={<Stakeholders
+        stakeholderText={stakeholderText}
+        user={user}
+        onStakeholderSubmit={onStakeholderSubmit}
+        />}/>
         
         <Route exact path="edit-profile" element={<EditProfile
         user={user}

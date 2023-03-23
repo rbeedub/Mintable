@@ -38,11 +38,11 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="twelve wide grey column">
+    <div class="two wide  column"></div>
+    <div class="twelve wide  column">
     <div class="column">
     <div class="ui three column grid">
-        <div class="orange column">
+        <div class="column">
         <label>My Personal Values</label>
   
             
@@ -70,7 +70,7 @@ return (
                 </div>
         </div>
 
-        <div class="green column">
+        <div class="column">
         <form class="ui form" onSubmit={handleSubmitForm} >    
         <div class="ui form">
             <div class="field">
@@ -99,13 +99,13 @@ return (
 
 
         </div>
-        <div class="teal column">
+        <div class=" column">
             <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act. If you're having trouble identifying your values, consider people you admire- who do you gravitate towards and what qualities do you admire about them? Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
         </div>
     </div>
     </div>
     </div>
-    <div class="two wide pink column"></div>
+    <div class="two wide column"></div>
  </div>
 
 )

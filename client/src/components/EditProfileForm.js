@@ -6,6 +6,8 @@ import ProfileUpdatedMsg from "./ProfileUpdatedMsg";
 
 function EditProfileForm( {user, setUser} ) {
 
+    console.log("profile", user)
+
     const [formData, setFormData] = useState(user)
     const [errors, setErrors] = useState([])
     const [profileUpdated, setProfileUpdated] = useState(false)
@@ -71,6 +73,10 @@ function EditProfileForm( {user, setUser} ) {
                                         <input value= {formData.name} type="text" name="name" placeholder="Name" onChange={handleFormChange}/>
                                     </div>
                                     <div class="field">
+                                        <label> Company Name</label>
+                                        <input value= {formData.company} type="text" name="company" placeholder="Company" onChange={handleFormChange}/>
+                                    </div>
+                                    <div class="field">
                                         <label> Username</label>
                                         <input value= {formData.username} type="text" name="username" placeholder="Username" onChange={handleFormChange}/>
                                     </div>
@@ -91,8 +97,8 @@ function EditProfileForm( {user, setUser} ) {
                                         <input value= {formData.location_name} type="text" name="location_name" placeholder="location" onChange={handleFormChange} />
                                     </div>
                                     <div class="field">
-                                        <label>Age </label>
-                                        <input value= {formData.age} type="number" name="age" placeholder="age" onChange={handleFormChange}  />
+                                        <label>Manager email </label>
+                                        <input value= {formData.manager_email} type="text" name="manager_email" placeholder="manager email" onChange={handleFormChange}  />
                                     </div>
                                     <div class="field">
                                         <label>Photo</label>

@@ -38,11 +38,11 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="twelve wide grey column">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
     <div class="column">
     <div class="ui three column grid">
-        <div class="green column">
+        <div class=" column">
         <label>Things I'm Drained By</label>
 
             <div class="ui list">
@@ -69,7 +69,7 @@ return (
                 </div>
         </div>
 
-        <div class="teal column">
+        <div class="column">
         <form class="ui form" onSubmit={handleSubmitForm} >
         <div class="ui form">
             <div class="field">
@@ -98,13 +98,13 @@ return (
 
 
         </div>
-        <div class="orange column">
+        <div class="column">
             <p>Things that drain you are the things you avoid. The stuff that you really don't like to do. The stuff that makes you want to poke yourself in the eyeballs. </p>
         </div>
     </div>
     </div>
     </div>
-    <div class="two wide pink column"></div>
+    <div class="two wide column"></div>
  </div>
 
 )

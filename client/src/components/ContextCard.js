@@ -35,11 +35,11 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="twelve wide grey column">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
     <div class="column">
     <div class="ui three column grid">
-        <div class="orange column">
+        <div class="column">
         <label>My Context</label>
 
             <div class="ui list">
@@ -49,7 +49,7 @@ return (
         </div>
         </div>
 
-        <div class="green column">
+        <div class="column">
         <form class="ui form" onSubmit={handleSubmitForm}>
         <div class="ui form">
             {/* <div class="field">
@@ -68,13 +68,13 @@ return (
 
 
         </div>
-        <div class="teal column">
+        <div class="column">
             <p>Are there any extrinsic factors or unique considerations in your life that affect how you're thinking about your work right now? For example, "I need to live abroad for a partner" or "I have a sick parent and need to work part-time" or "I have kids and want to work-from-home" or "I'm trying to buy a house to compensation is very important". It's important to label these, whether you act on them or not.</p>
         </div>
     </div>
     </div>
     </div>
-    <div class="two wide pink column"></div>
+    <div class="two wide column"></div>
  </div>
 
 )

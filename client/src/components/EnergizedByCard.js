@@ -38,11 +38,11 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide pink column"></div>
-    <div class="twelve wide grey column">
+    <div class="two wide column"></div>
+    <div class="twelve wide column">
     <div class="column">
     <div class="ui three column grid">
-        <div class="teal column">
+        <div class=" column">
         <label>Things I'm Energized By</label>
 
             <div class="ui list">
@@ -69,7 +69,7 @@ return (
                 </div>
         </div>
 
-        <div class="orange column">
+        <div class="column">
         <form class="ui form"  onSubmit={handleSubmitForm} >
         <div class="ui form">
             <div class="field">
@@ -98,13 +98,13 @@ return (
 
 
         </div>
-        <div class="green column">
+        <div class="column">
             <p>Things that energize you are what get you up in the morning. They're what fuel you, and you feel like you can get lost in. They're the things you are the most excited to do, and the things you could do for hours without anyone asking you to. </p>
         </div>
     </div>
     </div>
     </div>
-    <div class="two wide pink column"></div>
+    <div class="two wide column"></div>
  </div>
 
 )
