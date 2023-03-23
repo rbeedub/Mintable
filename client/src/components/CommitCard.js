@@ -38,12 +38,12 @@ function handleSubmitForm(e) {
 return (
 
 <>
-<div class="ui segments">
-<div class="ui segment">
+{/* <div class="ui segments"> */}
+{/* <div class="ui segment">
 <p>Weekly Quick Commit</p>
-</div>
+</div> */}
 <div class="ui segments">
-<div class="ui horizontal segments">
+<div class="ui horizontal segment">
 <div class="ui segment">
     <p>How will you ensure your manager has visibility into your motivations?</p>
 
@@ -60,7 +60,7 @@ return (
 <div class="ui form">
     <div class="ui form">
         <div class="field">
-            <textarea value={formData.quick_commit1} type="text" name="quick_commit1" placeholder="Your commitment" onChange={handleFormChange}/>
+            <textarea value={formData.quick_commit1} type="text" name="quick_commit1" placeholder={quick_commit1} onChange={handleFormChange}/>
         </div>
         </div>
     <button class="ui button">Submit</button>
@@ -69,13 +69,13 @@ return (
 
 
 </div>
-<div class="ui segment">
+{/* <div class="ui segment">
     <h3 class="ui header">Your Response</h3>
     <p>{quick_commit1}</p>
+</div> */}
 </div>
 </div>
-</div>
-</div>
+{/* </div> */}
 
 </>
 )
