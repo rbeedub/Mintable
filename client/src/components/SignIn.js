@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from "../context/user";
 
-
-function SignIn({ setUser, setErrors }) {
+function SignIn({ setErrors }) {
 
         const initialData = {
             name:'',
@@ -11,6 +11,7 @@ function SignIn({ setUser, setErrors }) {
         }
 
 const [formData, setFormdata] = useState(initialData)
+const [user, setUser] = useContext(UserContext)
 
 const navigate = useNavigate()
 

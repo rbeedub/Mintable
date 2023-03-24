@@ -6,7 +6,7 @@ import ErrorMsgList from './ErrorMsgList'
 import SignIn from './SignIn';
 import SignUpForm from './SignUpForm';
 
-function SignInPage (){
+function SignInPage(){
     
     const [user, setUser] = useContext(UserContext)
     const [showLogin, setShowLogin] = useState(true);
