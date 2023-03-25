@@ -9,6 +9,16 @@ function Stakeholders( { stakeholderText, onStakeholderSubmit }) {
      )
 return (
 <>
+<div class="ui relaxed grid">
+    <div class="four wide column">
+    <img class="ui fluid image" src="./images/directions.svg" />
+
+    </div>
+    <div class="twelve wide column">
+    <img class="ui fluid image" src="./images/1.svg" />
+
+    </div>
+  </div>
 
 {stakeholderResponse}
 </>

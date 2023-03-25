@@ -8,10 +8,10 @@ import { UserContext } from "../context/user";
 
 function EditProfileForm() {
 
-    console.log("profile", user)
-
     const [user, setUser] = useContext(UserContext)
+
     const [formData, setFormData] = useState(user)
+
     const [errors, setErrors] = useState([])
     const [profileUpdated, setProfileUpdated] = useState(false)
     let navigate = useNavigate()
