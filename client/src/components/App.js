@@ -12,6 +12,8 @@ import Stakeholders from "./Stakeholders";
 import LandingPage from "./LandingPage";
 import DashboardLayout from "./DashboardLayout";
 import EditProfile from "./EditProfile";
+import FiveDimensions from "./FiveDimensions";
+import Aware from "./Aware";
 
 
 function App() {
@@ -119,6 +121,10 @@ function App() {
         />}/>
         
         <Route exact path="edit-profile" element={<EditProfile/>}/>
+        <Route exact path="five-dimensions" element={<FiveDimensions/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+
+
     </Routes>
 </main>
 </>

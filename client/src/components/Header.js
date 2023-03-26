@@ -5,13 +5,22 @@ import { NavLink } from "react-router-dom"
 function Header() {
 return (
 <>
+    <img class="ui fluid image" src="./images/MBanner.svg" />
     <div class="ui secondary pointing menu">
     <a class="item">
     < NavLink to="/">Home</NavLink> 
     </a>
     <a class="item">
+        < NavLink to="/five-dimensions"> 5 Dimensions </NavLink>
+    </a>
+    <a class="item">
+        < NavLink to="/aware"> Aware </NavLink>
+    </a>
+
+    <a class="item">
         < NavLink to="/edit-profile"> My Profile </NavLink>
     </a>
+
     <div class="right menu">
         <a class="ui item active">
         <NavBar/>
