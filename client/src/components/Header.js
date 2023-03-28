@@ -11,11 +11,11 @@ return (
     < NavLink to="/">Home</NavLink> 
     </a>
     <a class="item">
-        < NavLink to="/five-dimensions"> 5 Dimensions </NavLink>
+        < NavLink to="/five-dimensions"> Leadership Dimensions </NavLink>
     </a>
-    <a class="item">
+    {/* <a class="item">
         < NavLink to="/aware"> Aware </NavLink>
-    </a>
+    </a> */}
 
     <a class="item">
         < NavLink to="/edit-profile"> My Profile </NavLink>

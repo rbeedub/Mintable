@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReflectionCard from "./ReflectionCard";
+import DimensionBehaviors from "./DimensionBehaviors";
 
 function Reflection( { setReflectionText, reflectionText, onReflectionSubmit } ) {
 // const [reflection, setReflection] = useState([])
@@ -15,6 +16,7 @@ const reflectionResponse = reflectionText.map(reflection  => {
 
 return (
 <>
+   <DimensionBehaviors />
    {reflectionResponse}
 
 </>

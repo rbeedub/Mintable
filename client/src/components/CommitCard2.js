@@ -42,7 +42,7 @@ return (
 <div class="ui segments">
 <div class="ui horizontal segment">
 <div class="ui segment">
-<p>How could you use this exercise with your team?</p>
+<p>Leaving this session, what will you commit to? By when? What support will you need? Make sure to include a concrete action, a date you'll complete the committed action, and list any support you'll need to get it done.</p>
 </div>
 
 <div class="ui segment">

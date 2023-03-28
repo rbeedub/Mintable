@@ -38,21 +38,11 @@ function handleSubmitForm(e) {
 return (
 
 <>
-{/* <div class="ui segments"> */}
-{/* <div class="ui segment">
-<p>Weekly Quick Commit</p>
-</div> */}
+
 <div class="ui segments">
 <div class="ui horizontal segment">
 <div class="ui segment">
     <p>How will you ensure your manager has visibility into your motivations?</p>
-
-
-{/* <h3 class="ui header">How will you ensure your manager has visibility into your motivations?</h3>
-<br></br>
-<h3>When/how will you share this with them?</h3> */}
-
-
 
 </div>
 <div class="ui segment">
@@ -69,13 +59,10 @@ return (
 
 
 </div>
-{/* <div class="ui segment">
-    <h3 class="ui header">Your Response</h3>
-    <p>{quick_commit1}</p>
-</div> */}
+
 </div>
 </div>
-{/* </div> */}
+
 
 </>
 )

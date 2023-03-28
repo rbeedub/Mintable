@@ -29,7 +29,7 @@ return (
 
 <p>Committing to awareness is nearly half the battle. When we don’t commit to slowing down to observe and reflect, it catches up with us. </p>
 <br></br>
-<img class="ui small left floated image" src="./images/aware1.svg"></img>
+<img class="ui small left floated image" src="/images/aware1.svg"></img>
 <p>Perhaps we don’t check in enough with our own motivations and get burnt out? We keep pushing our team towards a goal without the support they need and we see morale decline, performance dip, and attrition. We skip the steps of clarifying our role in a given quarter or on a project and we end up misaligned and frustrated with our manager. Even a simple, common occurrence - we don’t understand what’s important to other stakeholders in a meeting, land on the wrong outcome, and lose trust with a partner in the business.</p>
 <br></br>
 

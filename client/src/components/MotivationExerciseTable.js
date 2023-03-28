@@ -48,7 +48,7 @@ function handleSubmitForm(e) {
 
 <div class="column">
   <div>
-  <p>How important is this to you? Look at each of these 5 things and assign them the percentage the corresponds to how important this is to you. This column should total 100% </p>
+  <p>How important are the things that motivate you? Look at each of these 5 things and assign them the percentage the corresponds to how important this is to you. This column should total 100% </p>
   <br></br>
   <br></br>
   </div>
@@ -80,7 +80,7 @@ function handleSubmitForm(e) {
     <br></br>
       <br></br>
 
-      <p>On a scale of 1 - 10, 1 being the least and 10 being the most, how much time, eneregy and effort are you spending on each of things that motivates you?</p>
+      <p>On a scale of 1 - 10, 1 being the least and 10 being the most, how fulfilled do you feel in your current role by each of things that motivates you?</p>
 
     <div class="field">
     <input value={formData.status} name="status" placeholder="#1 movtivation" type="text" onChange={handleFormChange} />

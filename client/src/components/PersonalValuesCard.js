@@ -45,28 +45,30 @@ return (
     <div class="column">
     <div class="ui three column grid">
         <div class="column">
-        <label>My Personal Values</label>
+        {/* <label>My Personal Values</label> */}
+        <img class="ui fluid image" src="./images/PersonalValues.svg" alt="my personal values"/>
+
   
             
             <div class="ui list">
                 <div class="item">
-                    1 {personal_values1}
+                    1. {personal_values1}
                 </div>
                 <br></br>
                 <div class="item">
-                    2 {personal_values2}
+                    2. {personal_values2}
                 </div>
                 <br></br>
                 <div class="item">
-                    3 {personal_values3}
+                    3. {personal_values3}
                 </div>
                 <br></br>
                 <div class="item">
-                    4 {personal_values4}
+                    4. {personal_values4}
                 </div>
                 <br></br>
                 <div class="item">
-                    5 {personal_values5}
+                    5. {personal_values5}
                 </div>
                 <br></br>
                 </div>
@@ -102,7 +104,8 @@ return (
 
         </div>
         <div class=" column">
-            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act. If you're having trouble identifying your values, consider people you admire- who do you gravitate towards and what qualities do you admire about them? Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+            <br></br>
+            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire- who do you gravitate towards and what qualities do you admire about them? </p> <p>Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
         </div>
     </div>
     </div>

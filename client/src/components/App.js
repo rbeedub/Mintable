@@ -123,6 +123,11 @@ function App() {
         <Route exact path="edit-profile" element={<EditProfile/>}/>
         <Route exact path="five-dimensions" element={<FiveDimensions/>}/>
         <Route exact path="aware" element={<Aware/>}/>
+        {/* <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/> */}
 
 
     </Routes>

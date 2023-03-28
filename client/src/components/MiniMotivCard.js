@@ -1,6 +1,6 @@
 import React from "react";
 
-function MiniMotivCard( { motivations1, motivations2, motivations3, motivations4, motivations5 ,importance, importance2, importance3, importance4, importance5, status, status2, status3, status4, status5} ) {
+function MiniMotivCard( { motivations1, motivations2, motivations3, motivations4, motivations5 ,importance, importance2, importance3, importance4, importance5, status, status1, status2, status3, status4, status5} ) {
 
     console.log(importance)
 
@@ -25,7 +25,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance} % importan to you
+          {importance} % important to you
           </div>
           </div>
         </div>
@@ -33,7 +33,7 @@ return (
       <div class="event">
         <div class="content">
           <div class="summary">
-             {status} / 10 time and energy you spend dedicated to this
+             {status} / 10 on a current fulfillment scale
           </div>
         </div>
       </div>
@@ -61,7 +61,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance2} / 100 importance to you
+          {importance2} % important to you
           </div>
           </div>
         </div>
@@ -69,7 +69,7 @@ return (
       <div class="event">
         <div class="content">
           <div class="summary">
-             {status2} / 10 time and energy you spend dedicated to this
+             {status1} / 10 on a current fulfillment scale
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance3} / 100 importance to you
+          {importance3} % important to you
           </div>
           </div>
         </div>
@@ -107,7 +107,7 @@ return (
       <div class="event">
         <div class="content">
           <div class="summary">
-             {status3} / 10 time and energy you spend dedicated to this
+             {status2} / 10 on a current fulfillment scale
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance4} / 100 importance to you
+          {importance4} % important to you
           </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ return (
       <div class="event">
         <div class="content">
           <div class="summary">
-             {status4} / 10 time and energy you spend dedicated to this
+             {status3} / 10 on a current fulfillment scale
           </div>
         </div>
       </div>
@@ -170,7 +170,7 @@ return (
         <div class="content">
           <div class="summary">
           <div class="content">
-          {importance5} / 100 importance to you
+          {importance5} % important to you
           </div>
           </div>
         </div>
@@ -178,7 +178,7 @@ return (
       <div class="event">
         <div class="content">
           <div class="summary">
-             {status5} / 10 time and energy you spend dedicated to this
+             {status4} / 10 on a current fulfillment scale
           </div>
         </div>
       </div>
