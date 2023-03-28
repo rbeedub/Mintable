@@ -26,7 +26,6 @@ return (
 <div class="ui grid">
 <div class="one wide column"></div>
 <div class="five wide column">
-  <br></br>
 <div class="ui raised segment">
 <p>Which dimension resonates the most with you? </p>
 <p>Which dimension do you want to develop?</p>

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-skip_before_action :authorize, only: [:create, :update, :userDetail]
+skip_before_action :authorize, only: [:create, :userDetail]
 
 def index
     render json: User.all, status: :ok
@@ -42,7 +42,7 @@ def set_user
 end
 
 def user_params
-    params.permit(:name, :email, :direct_reports, :seniority, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email)
+    params.permit(:name, :email, :direct_reports, :seniority, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email, :id)
 end
 
 

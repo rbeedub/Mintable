@@ -3,6 +3,7 @@ import CommitCard from "./CommitCard";
 import CommitCard2 from "./CommitCard2";
 import { ManagerEmailForm } from "./ManagerEmailForm";
 import { useState } from "react"; 
+import { NavLink } from "react-router-dom"
 
 function Commit( { onCommitSubmit, setCommitText, commitText} ) {
   const [showEmailBtn, setShowEmailBtn] = useState(true);
@@ -61,6 +62,22 @@ commitText={commitText} />
   <div class="two wide column"></div>
 
 </div>
+
+<div class="ui grid">
+<div class="two wide column">
+      < NavLink to="/drill"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+
+      </div>
+
+      <div class="twelve wide column"></div>
+
+      <div class="two wide column">
+      < NavLink to="/stakeholders"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
+
+      </div>
+
+   </div>
+
 </>
 )
 }

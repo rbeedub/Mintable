@@ -2,6 +2,7 @@ import React from "react";
 import MiniMotivationCard from "./MiniMotivationCard";
 import MotivationExerciseTable from "./MotivationExerciseTable";
 import MotivationResponseCards from "./MotivationResponseCards";
+import { NavLink } from "react-router-dom";
 
 function MotivationDrill( { onExerciseFormSubmit, motivationList, exerciseList, setExerciseList} ) {
 
@@ -37,6 +38,21 @@ return (
    </div>
    <div class="one wide  column"></div>
 </div>
+<div class="ui grid">
+
+<div class="two wide column">
+      < NavLink to="/motivation"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+
+      </div>
+
+      <div class="twelve wide column"></div>
+
+      <div class="two wide column">
+      < NavLink to="/commit"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
+
+      </div>
+
+   </div>
 </>
 )
 }

@@ -5,8 +5,8 @@ function Aware() {
 return (
 <>
 <div class="ui grid">
-<div class="three wide column"></div>
-<div class="ten wide  column">
+<div class="one wide column"></div>
+<div class="fourteen wide column">
 <div class="ui sizer vertical segment">
   <div class="ui huge header">Introduction to Awareness</div>
 
@@ -38,9 +38,10 @@ return (
 <p>There are many ways to practice awareness to be a better manager. We recommend starting with three key practices:</p>
 <br></br>
 
-<p>Define stakeholders</p>
-<p>Understand and align on expectations with your own manager</p>
-<p>Cultivate self-awareness in your new role</p>
+<p> - Define stakeholders</p>
+<p> - Understand and align on expectations with your own manager</p>
+<p> - Cultivate self-awareness in your new role</p>
+<br></br>
 <p>These are the elements of awareness that we'll cover in our live session, and they are aligned to your level-up challenges afterward.</p>
 
 <p>Let's GROW!</p>
@@ -48,7 +49,7 @@ return (
   
   </div> 
   </div>
-  <div class="three wide column"></div>
+  <div class="one wide column"></div>
   </div>
 </>
 )

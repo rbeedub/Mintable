@@ -1,5 +1,6 @@
 import React from "react";
 import StakeholderFormPage from "./StakeholderFormPage";
+import { NavLink } from "react-router-dom";
 
 function Stakeholders( { stakeholderText, onStakeholderSubmit }) {
 
@@ -15,12 +16,29 @@ return (
 
     </div>
     <div class="twelve wide column">
-    <img class="ui fluid image" src="./images/1.svg" />
-
+    {/* <img class="ui fluid image" src="./images/1.svg" /> */}
+    {stakeholderResponse}
     </div>
   </div>
 
-{stakeholderResponse}
+{/* {stakeholderResponse} */}
+
+<div class="ui grid">
+
+<div class="two wide column">
+      < NavLink to="/commit"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+
+      </div>
+
+      <div class="twelve wide column"></div>
+
+      <div class="two wide column">
+      < NavLink to="/"> <button class="ui tiny purple button"> Home</button></NavLink>
+
+      </div>
+
+   </div>
+
 </>
 )
 }

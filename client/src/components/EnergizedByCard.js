@@ -75,25 +75,25 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List what energizes you</label>
-                <input value={formData.energized_by1} type="text" name="energized_by1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.energized_by1} type="text" name="energized_by1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by2} type="text" name="energized_by2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.energized_by2} type="text" name="energized_by2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by3} type="text" name="energized_by3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.energized_by3} type="text" name="energized_by3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by4} type="text" name="energized_by4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.energized_by4} type="text" name="energized_by4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by5} type="text" name="energized_by5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.energized_by5} type="text" name="energized_by5" placeholder="5" onChange={handleFormChange} required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button">Submit</button>
             </div>
             </form>
 

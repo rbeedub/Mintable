@@ -61,10 +61,10 @@ return (
             <div class="ui form">
                 <div class="field">
                     <label>My context is...</label>
-                    <textarea value={formData.context} type="text" name="context" placeholder="Your context" onChange={handleFormChange}/>
+                    <textarea value={formData.context} type="text" name="context" placeholder="Your context" onChange={handleFormChange} required/>
                 </div>
                 </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button">Submit</button>
             </div>
             </form>
 

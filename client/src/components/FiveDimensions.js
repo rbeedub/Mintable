@@ -23,14 +23,11 @@ We’ve developed a manager framework so you can understand what great looks lik
     <div class="left floated  column"></div>
     <div class="right floated  column"></div>
   </div>
-  <div class="ui hidden divider"></div>
-  <div class="ui hidden divider"></div>
-
   <div class="row">
   <div class="ui hidden divider"></div>
 
-    <div class="ten wide column">
-    <div>
+    <div class="fourteen wide column">
+   
     <div class="ui center aligned basic segment">
 
     <h2 class="ui center aligned icon header">
@@ -117,7 +114,7 @@ We’ve developed a manager framework so you can understand what great looks lik
 </div> */}
 {/* <div class="five wide column"></div> */}
   </div>
-</div>
+
 </div>
 <div class="one wide column"></div>
 

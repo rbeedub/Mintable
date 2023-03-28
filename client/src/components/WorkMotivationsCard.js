@@ -77,25 +77,25 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List your Work Motivations</label>
-                <input value={formData.motivations1} type="text" name="motivations1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.motivations1} type="text" name="motivations1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
            
-                <input value={formData.motivations2} type="text" name="motivations2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.motivations2} type="text" name="motivations2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
        
-                <input value={formData.motivations3} type="text" name="motivations3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.motivations3} type="text" name="motivations3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.motivations4} type="text" name="motivations4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.motivations4} type="text" name="motivations4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.motivations5} type="text" name="motivations5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.motivations5} type="text" name="motivations5" placeholder="5" onChange={handleFormChange} required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button">Submit</button>
             </div>
             </form>
 

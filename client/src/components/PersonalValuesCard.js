@@ -79,25 +79,25 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List your Values</label>
-                <input value={formData.personal_values1} type="text" name="personal_values1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.personal_values1} type="text" name="personal_values1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
            
-                <input value={formData.personal_values2} type="text" name="personal_values2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.personal_values2} type="text" name="personal_values2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
        
-                <input value={formData.personal_values3} type="text" name="personal_values3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.personal_values3} type="text" name="personal_values3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.personal_values4} type="text" name="personal_values4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.personal_values4} type="text" name="personal_values4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.personal_values5} type="text" name="personal_values5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.personal_values5} type="text" name="personal_values5" placeholder="5" onChange={handleFormChange}required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button" >Submit</button>
             </div>
             </form>
 
