@@ -47,7 +47,7 @@ User.create(
     location_name: "Beverly Hills", 
     company: "Doggles",
     logo: Faker::Company.logo, 
-    photo: "/images/2.svg", 
+    photo: "/images/7.svg", 
     cohort_id: Cohort.all.sample.id, 
     role:1, 
     manager_email:Faker::Internet.email, 

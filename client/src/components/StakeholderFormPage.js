@@ -1,8 +1,8 @@
 import React, { useState }  from "react";
 import Stakeholder1Form from "./Stakeholder1Form";
 import Stakeholder2Form from "./Stakeholder2Form";
-import Stakeholder3Form from "./Stakeholder2Form";
-import Stakeholder4Form from "./Stakeholder2Form";
+import Stakeholder3Form from "./Stakeholder3Form";
+import Stakeholder4FormPage from "./Stakeholder4FormPage";
 import StakeholdersTable from "./StakeholdersTable";
 
 
@@ -21,14 +21,14 @@ return (
 
 <>
 <div class="ui equal width grid">
-  <div class="green column">
+  <div class="column">
 
   <div>
 {showS1Btn ?
 
 <>
 
-<button class="ui button" onClick={() => setShowS1Btn(!showS1Btn)}> Stakeholder One</button>
+<button class="ui tiny button" onClick={() => setShowS1Btn(!showS1Btn)}> Stakeholder One</button>
 </>
 
 :
@@ -43,20 +43,20 @@ return (
             q5={q5}
             q6={q6}
             />
-    <button class="ui  button" onClick={() => setShowS1Btn(!showS1Btn)}> Close </button>
+    <button class="ui tiny button" onClick={() => setShowS1Btn(!showS1Btn)}> Close </button>
 </>
 }
 </div>
 
   </div>
-  <div class="blue column">
+  <div class="column">
 
   <div>
 {showS2Btn ?
 
 <>
 
-<button class="ui button" onClick={() => setShowS2Btn(!showS2Btn)}> Stakeholder Two</button>
+<button class="ui tiny button" onClick={() => setShowS2Btn(!showS2Btn)}> Stakeholder Two</button>
 </>
 
 
@@ -73,7 +73,7 @@ return (
             s2q5={s2q5}
             s2q6={s2q6}
             />
-    <button class="ui  button" onClick={() => setShowS2Btn(!showS2Btn)}> Close </button>
+    <button class="ui tiny button" onClick={() => setShowS2Btn(!showS2Btn)}> Close </button>
 </>
 </>
 
@@ -82,14 +82,14 @@ return (
 
 
   </div>
-  <div class="pink column">
+  <div class="column">
 
   <div>
 {showS3Btn ?
 
 <>
 
-<button class="ui button" onClick={() => setShowS3Btn(!showS3Btn)}> Stakeholder Three</button>
+<button class="ui tiny button" onClick={() => setShowS3Btn(!showS3Btn)}> Stakeholder Three</button>
 </>
 
 
@@ -114,21 +114,21 @@ return (
 </div>
 
   </div>
-  <div class="teal column">
+  <div class="column">
 
   <div>
 {showS4Btn ?
 
 <>
 
-<button class="ui button" onClick={() => setShowS4Btn(!showS4Btn)}> Stakeholder Four</button>
+<button class="ui tiny button" onClick={() => setShowS4Btn(!showS4Btn)}> Stakeholder Four</button>
 </>
 
 
 : <>
 
 <>
-        <Stakeholder4Form
+        <Stakeholder4FormPage
             id={id}
             onStakeholderSubmit={onStakeholderSubmit}
             s4q1={s4q1}
