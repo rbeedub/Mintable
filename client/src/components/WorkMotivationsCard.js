@@ -40,7 +40,10 @@ return (
 <div class="ui grid">
     <div class="two wide column"></div>
     <div class="twelve wide column">
+    <div class="ui very padded segment">
     <p>Now, it's time to put it all together. Imagine you feeling at your professional best, energized, living by your personal values, and incorporating any important context. What motivates you professionally? </p>
+        </div>
+        <br></br>
     <div class="column">
     <div class="ui three column grid">
         <div class="column">
@@ -102,8 +105,15 @@ return (
 
         </div>
         <div class="column">
-            <br></br>
-         <p> Motivations can be anything that gets you excited to come to work and energized for the long haul - from compensation to impact to flexibility to people you work with. The most important aspect of the exercise is to be brutally honest with yourself about what drives you.</p> <p>Examples - compensation, impact of work, people - talent, people - social, career growth, title, location, in-office, benefits, flexibility</p>
+        <div class="ui move right reveal">
+            <div class="visible content">
+                <img src="./images/glasses.svg" class="ui medium image"/>
+            </div>
+            <div class="hidden content">
+            <p> Motivations can be anything that gets you excited to come to work and energized for the long haul - from compensation to impact to flexibility to people you work with. The most important aspect of the exercise is to be brutally honest with yourself about what drives you.</p> <p>Examples - compensation, impact of work, people - talent, people - social, career growth, title, location, in-office, benefits, flexibility</p>
+            </div>
+            </div>
+      
         </div>
     </div>
     </div>

@@ -9,6 +9,8 @@ return(
     <div class="ui list">
         {/* <div class="ui header"> My Motivations</div> */}
         <img class="ui flex image" src="./images/WorkMotivations.svg" alt="My work motivations" />
+        <div class="ui hidden divider"></div>
+
             <div class="item">
                     1. {motivations1}
                 </div>

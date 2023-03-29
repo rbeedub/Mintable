@@ -115,7 +115,7 @@ function EditProfileForm() {
                     </form>
                     </div>
 
-                    <div class="eight wide purple column">
+                    <div class="eight wide column">
 
                         <div class="ui centered card">
                         <div class="image">

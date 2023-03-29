@@ -29,6 +29,12 @@ console.log("commit component", commitText)
 <div class="ui grid">
   <div class="two wide column"></div>
   <div class="twelve wide column">
+    <div class="ui basic segment"> 
+    <div class="ui large header"> Make a Commitment</div>
+    <p> 
+    Making a commitment is important because it helps us to set clear goals, stay motivated, and build trust and accountability. By committing to something, we demonstrate our reliability and willingness to follow through, which can help us grow and develop personally while strengthening relationships with others. </p> <p> Commitments also help to build trust and accountability, both with ourselves and with others. By making a commitment and following through on it, we demonstrate to ourselves and others that we are reliable, trustworthy, and accountable for our actions. This can help to strengthen relationships and build a sense of mutual respect and understanding.
+    </p>
+    </div>
   {commitResponse}
 {commitResponseTwo}
 

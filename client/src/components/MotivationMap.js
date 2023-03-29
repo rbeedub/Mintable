@@ -40,11 +40,19 @@ console.log(motivationList)
 
 return (
 <>
+<div class="ui hidden divider"></div>
+
 {motivationResponse}
+<div class="ui hidden divider"></div>
+
 {energizedByResponse}
+<div class="ui hidden divider"></div>
 {drainedByResponse}
+<div class="ui hidden divider"></div>
 {contextResponse} 
+<div class="ui hidden divider"></div>
 {motivationsResponse} 
+<div class="ui hidden divider"></div>
 <div class="ui grid">
       <div class="two wide column">
       < NavLink to="/reflection"> <button class="ui tiny button"> Previous Activity</button></NavLink>
@@ -56,6 +64,7 @@ return (
       < NavLink to="/drill"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
 
       </div>
+      <br></br>
 
    </div>
 

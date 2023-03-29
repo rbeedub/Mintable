@@ -8,7 +8,10 @@ return (
 <div class="one wide column"></div>
 <div class="fourteen wide column">
 <div class="ui raised segment">
-  <p>Review each leadership dimension below. Pay attention to the behaviors that sound like you when you're at your best, and when you're not. Find the dimension that you feel the most confident in, and the one that you feel like needs the most work. Once you've identified the areas that you'd like to invest in, reflect on them in the section below.</p>
+  <p>
+  Perhaps one of the best tools you can use with this framework is the Indicators Chart. This chart organizes behaviors associated with each dimension across three "goldilocks" categories: Not enough, Just right, and Too much. Using this chart, you'll be able to better understand how you show up on both good and bad days as a manager.
+  </p>
+  <p>Review each leadership dimension below. Pay attention to the behaviors that sound like you when you're at your best, and when you're not. Find the dimension that you feel the most confident in, and the one that you feel like needs the most work. Once you've identified the areas that you'd like to invest in, reflect on them in the section below.</p> 
 </div>
 
 <table class="ui very basic table">

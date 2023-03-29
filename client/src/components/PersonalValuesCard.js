@@ -104,8 +104,16 @@ return (
 
         </div>
         <div class=" column">
-            <br></br>
-            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire- who do you gravitate towards and what qualities do you admire about them? </p> <p>Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+        <div class="ui move right reveal">
+            <div class="visible content">
+                <img src="./images/stars.svg" class="ui medium image"/>
+            </div>
+            <div class="hidden content">
+            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire- who do you 
+                gravitate towards and what qualities do you admire about them? </p> <p>Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+            </div>
+            </div>
+
         </div>
     </div>
     </div>
