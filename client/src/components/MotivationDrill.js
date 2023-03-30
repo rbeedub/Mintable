@@ -20,23 +20,23 @@ function MotivationDrill( { onExerciseFormSubmit, motivationList, exerciseList, 
 
 return (
 <>
+<div>
+
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+
+<img class="ui top aligned fluid image" src="/images/MotivationExerciseSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
+<br></br>
 <div class="ui grid">
    <div class="two wide  column"></div>
    <div class="three wide  column">
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
-   <div class="ui hidden divider"></div>
+      <br></br>
    <div class="ui hidden divider"></div>
 
       {motivationsResponse}</div>
@@ -50,11 +50,11 @@ return (
    <div class="two wide  column"></div>
    <div class="one wide  column"></div>
    <div class="fourteen wide column">
-   <MotivationResponseCards
+   {/* <MotivationResponseCards
    motivationList={motivationList}
    exerciseList={exerciseList}
 
-   />
+   /> */}
 
    </div>
    <div class="one wide  column"></div>

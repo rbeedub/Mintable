@@ -17,8 +17,23 @@ const reflectionResponse = reflectionText.map(reflection  => {
 
 return (
 <>
+<div>
+
 <div class="ui grid">
-<div class="two wide column"></div>
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+<img class="ui top aligned fluid image" src="/images/ReflectionSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
+
+<div class="ui grid">
+
+<div class="two wide column">
+
+</div>
 <div class="twelve wide column">
 <div class="ui hidden divider"></div>
 
@@ -50,7 +65,11 @@ return (
    <DimensionBehaviors />
    {reflectionResponse}
    <div class="ui grid">
-      <div class="fourteen wide column"></div>
+   <div class="two wide column">
+      < NavLink to="/activities"> <button class="ui tiny button"> All Activities</button></NavLink>
+
+      </div>
+      <div class="twelve wide column"></div>
       <div class="two wide column">
       < NavLink to="/motivation"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
 

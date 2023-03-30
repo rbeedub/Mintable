@@ -40,6 +40,18 @@ console.log(motivationList)
 
 return (
 <>
+<div>
+
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+
+<img class="ui top aligned fluid image" src="/images/MotivationMapSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
 <div class="ui hidden divider"></div>
 
 {motivationResponse}

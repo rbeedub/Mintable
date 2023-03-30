@@ -5,10 +5,26 @@ import { NavLink } from "react-router-dom";
 function FiveDimensions() {
 return (
 <>
+<div>
+
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/"> 
+
+<img class="ui top aligned fluid image" src="/images/LeaderDimensionsBanner.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
 <div class="ui grid">
 <div class="one wide column"></div>
 
 <div class="fourteen wide column">
+<br></br>
+
+<br></br>
+
     <p>
     One of the toughest aspects of becoming a manager is not knowing exactly what the role entails 🤔
 
@@ -35,6 +51,10 @@ We’ve developed a manager framework so you can understand what great looks lik
       The Five Dimensions of Great Leadership
     </h2>
 <br></br>
+<br></br>
+
+<br></br>
+
 
     <div class="ui internally celled grid">
     <div class="row">

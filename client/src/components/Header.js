@@ -13,9 +13,11 @@ return (
     <a class="item">
         < NavLink to="/five-dimensions"> Leadership Dimensions </NavLink>
     </a>
-    {/* <a class="item">
-        < NavLink to="/aware"> Aware </NavLink>
-    </a> */}
+    <a class="item">
+    < NavLink to="/activities"> 
+
+        Activities </NavLink>
+    </a>
 
     <a class="item">
         < NavLink to="/edit-profile"> My Profile </NavLink>

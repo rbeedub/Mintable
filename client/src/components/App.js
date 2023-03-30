@@ -14,6 +14,8 @@ import DashboardLayout from "./DashboardLayout";
 import EditProfile from "./EditProfile";
 import FiveDimensions from "./FiveDimensions";
 import Aware from "./Aware";
+import Activities from "./Activities";
+import Overview from "./Overview";
 
 
 function App() {
@@ -123,6 +125,12 @@ function App() {
         <Route exact path="edit-profile" element={<EditProfile/>}/>
         <Route exact path="five-dimensions" element={<FiveDimensions/>}/>
         <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="activities" element={<Activities/>}/>
+        <Route exact path="overview" element={<Overview
+        motivationList={motivationList}
+        exerciseList={exerciseList}
+        />}/>
+
         {/* <Route exact path="aware" element={<Aware/>}/>
         <Route exact path="aware" element={<Aware/>}/>
         <Route exact path="aware" element={<Aware/>}/>

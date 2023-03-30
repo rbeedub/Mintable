@@ -100,9 +100,9 @@ return (
 
         </div>
         <div class="column">
-        <div class="ui move right reveal">
+        <div class="ui move reveal">
             <div class="visible content">
-                <img src="./images/sad.svg" class="ui medium image"/>
+                <img src="./images/sad.svg" class="ui fluid image"/>
             </div>
             <div class="hidden content">
             <p>Things that drain you are the things you avoid. The stuff that you really don't like to do. To feel drained by something means to feel exhausted, depleted, or tired as a result of a particular activity, situation, or person.</p> <p> When you feel drained by something, you may have difficulty focusing, lack motivation, or feel emotionally depleted. </p>

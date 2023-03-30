@@ -12,7 +12,7 @@ return (
     <div class="ui segment">
 <div class="ui card">
   <div class="centered content">
-    <div class="ui center aligned teal header">"{motivations1}"</div>
+    <div class="ui small center aligned teal header">"{motivations1}"</div>
   </div>
   <div class="uicontent">
     <div class="ui small feed">
@@ -49,7 +49,7 @@ return (
 
     <div class="ui card">
   <div class="centered content">
-    <div class="ui center aligned teal header">"{motivations2}"</div>
+    <div class="ui small center aligned teal header">"{motivations2}"</div>
   </div>
   <div class="uicontent">
     <div class="ui small feed">
@@ -88,7 +88,7 @@ return (
 
 <div class="ui card">
   <div class="centered content">
-    <div class="ui center aligned teal header">"{motivations3}"</div>
+    <div class="ui small center aligned teal header">"{motivations3}"</div>
   </div>
   <div class="uicontent">
     <div class="ui small feed">
@@ -125,7 +125,7 @@ return (
 
     <div class="ui card">
   <div class="centered content">
-    <div class="ui center aligned teal header">"{motivations4}"</div>
+    <div class="ui small center aligned teal header">"{motivations4}"</div>
   </div>
   <div class="uicontent">
     <div class="ui small feed">
@@ -162,7 +162,7 @@ return (
 
     <div class="ui card">
   <div class="centered content">
-    <div class="ui center aligned teal header">"{motivations5}"</div>
+    <div class="ui small center aligned teal header">"{motivations5}"</div>
   </div>
   <div class="uicontent">
     <div class="ui small feed">

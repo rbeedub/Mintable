@@ -100,9 +100,9 @@ return (
 
         </div>
         <div class="column">
-        <div class="ui move right reveal">
+        <div class="ui move reveal">
             <div class="visible content">
-                <img src="./images/sunnies.svg" class="ui medium image"/>
+                <img src="./images/sunnies.svg" class="ui fluid image"/>
             </div>
             <div class="hidden content">
             <p>Things that energize you are what get you up in the morning. They're what fuel you, and you feel like you can get lost in. </p> <p> They're the things you are the most excited to do, and the things you could do for hours without anyone asking you to. </p>

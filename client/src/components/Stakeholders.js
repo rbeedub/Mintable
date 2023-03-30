@@ -1,6 +1,7 @@
 import React from "react";
 import StakeholderFormPage from "./StakeholderFormPage";
 import { NavLink } from "react-router-dom";
+import Overview from "./Overview";
 
 function Stakeholders( { stakeholderText, onStakeholderSubmit }) {
 
@@ -10,6 +11,17 @@ function Stakeholders( { stakeholderText, onStakeholderSubmit }) {
      )
 return (
 <>
+<div>
+
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+<img class="ui top aligned fluid image" src="/images/StakeholderMapSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
 
 <div class="ui grid">
 <div class="one wide  column"></div>
@@ -54,7 +66,7 @@ Often, new people managers are thrown into the role without anyone specifically 
       <div class="twelve wide column"></div>
 
       <div class="two wide column">
-      < NavLink to="/"> <button class="ui tiny purple button"> Home</button></NavLink>
+      < NavLink to="/overview"> <button class="ui tiny purple button"> Overview </button></NavLink>
 
       </div>
 

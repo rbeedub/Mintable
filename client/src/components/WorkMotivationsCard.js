@@ -105,9 +105,9 @@ return (
 
         </div>
         <div class="column">
-        <div class="ui move right reveal">
+        <div class="ui move reveal">
             <div class="visible content">
-                <img src="./images/glasses.svg" class="ui medium image"/>
+                <img src="./images/glasses.svg" class="ui fluid image"/>
             </div>
             <div class="hidden content">
             <p> Motivations can be anything that gets you excited to come to work and energized for the long haul - from compensation to impact to flexibility to people you work with. The most important aspect of the exercise is to be brutally honest with yourself about what drives you.</p> <p>Examples - compensation, impact of work, people - talent, people - social, career growth, title, location, in-office, benefits, flexibility</p>

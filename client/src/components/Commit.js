@@ -22,7 +22,18 @@ console.log("commit component", commitText)
   return (
 
 <>
+<div>
 
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+
+<img class="ui top aligned fluid image" src="/images/WeeklyCommitSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
 
 
 
@@ -38,7 +49,7 @@ console.log("commit component", commitText)
   {commitResponse}
 {commitResponseTwo}
 
-<div>
+<div class="ui segment">
   <div> Do you want to send an email to your manager with your commitment? </div>
 {showEmailBtn ?
 
@@ -54,6 +65,8 @@ commitText={commitText} />
     <button class="ui red right floated button" onClick={() => setShowEmailBtn(!showEmailBtn)}> Close </button>
 </>
 }
+<br></br>
+<br></br>
 </div>
 
 

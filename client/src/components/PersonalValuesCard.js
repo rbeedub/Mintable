@@ -40,7 +40,8 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide  column"></div>
+    <div class="two wide  column">
+    </div>
     <div class="twelve wide  column">
     <div class="column">
     <div class="ui three column grid">
@@ -104,14 +105,14 @@ return (
 
         </div>
         <div class=" column">
-        <div class="ui move right reveal">
+        <div class="ui move reveal">
             <div class="visible content">
-                <img src="./images/stars.svg" class="ui medium image"/>
+            <img src="./images/stars.svg" class="ui fluid image"/>
             </div>
+          
             <div class="hidden content">
-            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire- who do you 
-                gravitate towards and what qualities do you admire about them? </p> <p>Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
-            </div>
+            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire and what qualities you admire about them. </p> <p>Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+            </div>                
             </div>
 
         </div>
