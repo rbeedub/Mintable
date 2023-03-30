@@ -40,30 +40,36 @@ return (
 <div class="ui grid">
     <div class="two wide column"></div>
     <div class="twelve wide column">
+    <div class="ui very padded segment">
+    <p>Now, it's time to put it all together. Imagine you feeling at your professional best, energized, living by your personal values, and incorporating any important context. What motivates you professionally? </p>
+        </div>
+        <br></br>
     <div class="column">
     <div class="ui three column grid">
         <div class="column">
-        <label>My Work Motivations</label>
+        {/* <label>My Work Motivations</label> */}
+        <img class="ui fluid image" src="./images/WorkMotivations.svg" alt="My work motivations"/>
+
 
             <div class="ui list">
                 <div class="item">
-                    1 {motivations1}
+                    1. {motivations1}
                 </div>
                 <br></br>
                 <div class="item">
-                    2 {motivations2}
+                    2. {motivations2}
                 </div>
                 <br></br>
                 <div class="item">
-                    3 {motivations3}
+                    3. {motivations3}
                 </div>
                 <br></br>
                 <div class="item">
-                    4 {motivations4}
+                    4. {motivations4}
                 </div>
                 <br></br>
                 <div class="item">
-                    5 {motivations5}
+                    5. {motivations5}
                 </div>
                 <br></br>
                 </div>
@@ -74,38 +80,40 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List your Work Motivations</label>
-                <input value={formData.motivations1} type="text" name="motivations1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.motivations1} type="text" name="motivations1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
            
-                <input value={formData.motivations2} type="text" name="motivations2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.motivations2} type="text" name="motivations2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
        
-                <input value={formData.motivations3} type="text" name="motivations3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.motivations3} type="text" name="motivations3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.motivations4} type="text" name="motivations4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.motivations4} type="text" name="motivations4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.motivations5} type="text" name="motivations5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.motivations5} type="text" name="motivations5" placeholder="5" onChange={handleFormChange} required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button">Submit</button>
             </div>
             </form>
 
 
         </div>
         <div class="column">
-            <p>Now, it's time to put it all together. Imagine you feeling at your professional best, energized, living by your personal values, and incorporating any important context. 
-
-What motivates you professionally? Write down each unique motivation - focusing only on your top four for the purposes of this exercise. If you feel you have more, you can always add them afterward. 
-
-Motivations can be anything that gets you excited to come to work and energized for the long haul - from compensation to impact to flexibility to people you work with. The most important aspect of the exercise is to be brutally honest with yourself about what drives you. 
-
-Examples - compensation, impact of work, people - talent, people - social, career growth, title, location, in-office, benefits, flexibility</p>
+        <div class="ui move reveal">
+            <div class="visible content">
+                <img src="./images/glasses.svg" class="ui fluid image"/>
+            </div>
+            <div class="hidden content">
+            <p> Motivations can be anything that gets you excited to come to work and energized for the long haul - from compensation to impact to flexibility to people you work with. The most important aspect of the exercise is to be brutally honest with yourself about what drives you.</p> <p>Examples - compensation, impact of work, people - talent, people - social, career growth, title, location, in-office, benefits, flexibility</p>
+            </div>
+            </div>
+      
         </div>
     </div>
     </div>

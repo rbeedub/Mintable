@@ -4,62 +4,6 @@ import { Editor } from "@tinymce/tinymce-react";
 
 function TextEditor( {id, setReflectionText, reflectionText, onReflectionSubmit} ) {
 
-//     // const { user, setUser } = useContext(UserContext);
-
-//     console.log(reflectionText)
-//     const [formData, setFormData] = useState({
-//       notes: reflectionText.notes
-//     })
-
-//     const [initialValue, setInitialValue] = useState(formData.notes);
-
-
-
-
-// function handleFormChange(e) {
-//   const {name, value} = e.target;
-//   console.log(e.target.value)
-//   setFormData({...formData, [name]: value})
-//   }
-
-
-// function handleSubmitForm(e) {
-//   // e.preventDefault()
-
-//   fetch(`/reflections/${id}`, {
-//       method: 'PATCH',
-//       headers: {
-//           "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(formData)
-//   })
-//   .then((res) => res.json())
-//   .then(onReflectionSubmit)
-//   .then(setFormData(initialValue))
-// }
-
-//   return (
-// <>
-
-//     <Editor
-//       apiKey="rhoelxuz68rgijapyo6tg71n77d1jmxxxb2hzugo0trdr7hn"
-//       plugins="wordcount"
-//       intitialValue={reflectionText}
-//       value={initialValue}
-//       name="notes"
-//       // onSubmit={handleSubmitForm}
-//       onEditorChange={handleSubmitForm}
-//       />
-//       {/* <button class="ui buton"> Submit </button> */}
- 
-// </>
-// )
-// }
-
-
-
-// function MyComponent({initialValue}) {
-  // const [dirty, setDirty] = useState(false);
 
   const initialData = {
     notes:'',
@@ -75,7 +19,6 @@ function TextEditor( {id, setReflectionText, reflectionText, onReflectionSubmit}
   }
 
 
-  // useEffect(() => setDirty(false), [setReflectionText]);
   
 
 function handleSubmitForm(e) {
@@ -95,6 +38,7 @@ function handleSubmitForm(e) {
 
   return (
     <>
+ 
       <Editor
         apiKey="rhoelxuz68rgijapyo6tg71n77d1jmxxxb2hzugo0trdr7hn"
         plugins="wordcount"
@@ -104,7 +48,7 @@ function handleSubmitForm(e) {
         onEditorChange={(newValue, editor) => setFormData({...formData, notes: newValue}) }
         // onClick={handleSubmitForm}
       />
-      <button class="ui button" onClick={handleSubmitForm} >Save</button>
+      <button class="ui teal left floated button" onClick={handleSubmitForm} >Save</button>
     </>
   );
 }

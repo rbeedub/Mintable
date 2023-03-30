@@ -3,7 +3,7 @@ import MiniMotivCard from "./MiniMotivCard";
 
 function MotivationResponseCards( { user, exerciseList, motivationList} ) {
 
-   console.log(user)
+   console.log("miniMotivCard", exerciseList)
 
    const zip = motivationList.map((mot, idx)  => ({ ...mot, ...exerciseList[idx]}))
    
@@ -13,11 +13,11 @@ function MotivationResponseCards( { user, exerciseList, motivationList} ) {
 return (
 <>
 <br></br>
-<div class="ui large header">What we're looking for are the biggest discrpancies between how important something is to you, and how much time and energy that thing is getting in your work. This can be a signal that something is out of whack, not working or needs to be realigned.</div>
+<div class="ui medium header"> Use this view of your work priorities, their importance to you, and how fulfilled you feel currently to guide conversations with your manager, and assess your satisfaction in your current role. You can also use this map with your direct reports to gauge their motivations and feelings of fulfillment. </div>
 
 <br></br>
 {motivCard}
-
+<br></br>
 </>
 )
 }

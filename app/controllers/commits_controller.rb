@@ -16,7 +16,6 @@ class CommitsController < ApplicationController
 
     def update
         @commit.update!(commit_params)
-        # work_book = Workbook.find_by!(workbook_id: @workboook)
         render json: @commit, status: :accepted
     end
 

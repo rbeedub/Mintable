@@ -40,9 +40,9 @@ function handleSubmitForm(e) {
 return (
 <>
 
-<div class="ui six column grid">
+
 <form class="ui form" onSubmit={handleSubmitForm}>
-<div class="column">
+{/* <div class="column"> */}
 
 <div class="ui form">
 <div class="field">
@@ -50,7 +50,6 @@ return (
     <textarea value={formData.q1} type="text" name="q1" placeholder="What person or team?" onChange={handleFormChange}/>
 </div>
 
-  <div class="column">
 
   <div class="ui form">
     <div class="field">
@@ -58,9 +57,8 @@ return (
         <textarea value={formData.q2} type="text" name="q2" placeholder="Shared OKRs, goals or outcomes?" onChange={handleFormChange}/>
     </div>
   </div>
-  </div>
 
-  <div class="column">
+
   <div class="ui form">
     <div class="field">
         <label>What does success look like for them/their team? What is important to them/their team?</label>
@@ -68,9 +66,7 @@ return (
     </div>
   </div>
 
-  </div>
 
-  <div class="column">
 
   <div class="ui form">
     <div class="field">
@@ -79,9 +75,8 @@ return (
     </div>
   </div>
 
-  </div>
 
-  <div class="column">
+
 
   <div class="ui form">
     <div class="field">
@@ -89,9 +84,9 @@ return (
         <textarea value={formData.q5} type="text" name="q5" placeholder="Style, frequency, initiator" onChange={handleFormChange}/>
     </div>
   </div>
-  </div>
 
-  <div class="column">
+
+
 
   <div class="ui form">
     <div class="field">
@@ -100,15 +95,14 @@ return (
     </div>
   </div>
 
-  </div>
   
   </div>
 <button class="ui green right floated button">Submit</button>
 
-</div>
+{/* </div> */}
 
 </form>
-</div>
+
 
 </>
 )

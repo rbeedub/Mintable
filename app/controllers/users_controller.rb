@@ -37,8 +37,12 @@ def destroy
 end
 
 private
+def set_user
+    @user = User.find(params[:id])
+end
+
 def user_params
-    params.permit(:name, :email, :direct_reports, :seniority, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email)
+    params.permit(:name, :email, :direct_reports, :seniority, :username, :password, :password_confirmation, :bio, :location_zip, :location_name, :company, :logo, :photo, :role, :manager_email, :dr_email, :id)
 end
 
 

@@ -2,7 +2,7 @@
 import React from "react";
 import {useState} from "react";
 
-function Stakeholder4Form( { id, onStakeholderSubmit, s4q1, s4q2, s4q3, s4q4, s4q5, s4q6 } ) {
+function Stakeholder4Form( { id, onStakeholderSubmit } ) {
    
     const initialData = {
         s4q1:'',

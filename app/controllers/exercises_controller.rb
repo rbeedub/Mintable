@@ -32,7 +32,7 @@ class ExercisesController < ApplicationController
     end
 
     def exercise_params
-        params.permit(:id, :importance, :importance2, :importance2, :importance3, :importance4, :importance5, :my_thoughts, :next_steps, :status, :status2, :status3, :status4, :status5)
+        params.permit(:id, :importance, :importance2, :importance3, :importance4, :importance5, :my_thoughts, :next_steps, :status, :status2, :status3, :status4, :status5)
     end
 
 end

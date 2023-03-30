@@ -43,27 +43,28 @@ return (
     <div class="column">
     <div class="ui three column grid">
         <div class=" column">
-        <label>Things I'm Energized By</label>
+        {/* <label>Things I'm Energized By</label> */}
+        <img class="ui fluid image" src="./images/EnergizedBy.svg" alt="Things I'm energized by"/>
 
             <div class="ui list">
                 <div class="item">
-                    1 {energized_by1}
+                    1. {energized_by1}
                 </div>
                 <br></br>
                 <div class="item">
-                    2 {energized_by2}
+                    2. {energized_by2}
                 </div>
                 <br></br>
                 <div class="item">
-                    3 {energized_by3}
+                    3. {energized_by3}
                 </div>
                 <br></br>
                 <div class="item">
-                    4 {energized_by4}
+                    4. {energized_by4}
                 </div>
                 <br></br>
                 <div class="item">
-                    5 {energized_by5}
+                    5. {energized_by5}
                 </div>
                 <br></br>
                 </div>
@@ -74,32 +75,39 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List what energizes you</label>
-                <input value={formData.energized_by1} type="text" name="energized_by1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.energized_by1} type="text" name="energized_by1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by2} type="text" name="energized_by2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.energized_by2} type="text" name="energized_by2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by3} type="text" name="energized_by3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.energized_by3} type="text" name="energized_by3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by4} type="text" name="energized_by4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.energized_by4} type="text" name="energized_by4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
 
-                <input value={formData.energized_by5} type="text" name="energized_by5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.energized_by5} type="text" name="energized_by5" placeholder="5" onChange={handleFormChange} required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button">Submit</button>
             </div>
             </form>
 
 
         </div>
         <div class="column">
-            <p>Things that energize you are what get you up in the morning. They're what fuel you, and you feel like you can get lost in. They're the things you are the most excited to do, and the things you could do for hours without anyone asking you to. </p>
+        <div class="ui move reveal">
+            <div class="visible content">
+                <img src="./images/sunnies.svg" class="ui fluid image"/>
+            </div>
+            <div class="hidden content">
+            <p>Things that energize you are what get you up in the morning. They're what fuel you, and you feel like you can get lost in. </p> <p> They're the things you are the most excited to do, and the things you could do for hours without anyone asking you to. </p>
+            </div>
+            </div>
         </div>
     </div>
     </div>

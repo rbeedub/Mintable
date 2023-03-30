@@ -8,10 +8,10 @@ import { UserContext } from "../context/user";
 
 function EditProfileForm() {
 
-    console.log("profile", user)
-
     const [user, setUser] = useContext(UserContext)
+
     const [formData, setFormData] = useState(user)
+
     const [errors, setErrors] = useState([])
     const [profileUpdated, setProfileUpdated] = useState(false)
     let navigate = useNavigate()
@@ -65,8 +65,8 @@ function EditProfileForm() {
         <>
             <ErrorMsgList errors={errors}/>
             {profileUpdated ? <ProfileUpdatedMsg /> : null}
-  
-                <div class="ui segment"> 
+            <div class="ui grid"> 
+                <div class="eight wide column"> 
                     <form class="ui form" onSubmit={handleFormSubmit}>
                          <div class="ui one column">
                             <div >
@@ -115,9 +115,40 @@ function EditProfileForm() {
                     </form>
                     </div>
 
+                    <div class="eight wide column">
+
+                        <div class="ui centered card">
+                        <div class="image">
+                            <img src={user.photo}/>
+                        </div>
+                        <div class="content">
+                            <a class="header">{user.name}</a>
+                            <div class="meta">
+                            <span class="date"> Username: {user.username}</span>
+                            <br></br>
+                            <span class="date"> Company: {user.company}</span>
+                            <br></br>
+                            <span class="date"> Email: {user.email}</span>
+                            </div>
+                            <div class="description">
+                            About me: "{user.bio}""
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a>
+                            <i class="user icon"></i>
+                            {user.manager_email}
+                            </a>
+                        </div>
+                        </div>
+
+                    </div>
+
+                    </div>
+
             <div class="column">
                 <div class="ui basic segment">
-                    <button class="ui button" type="submit" onClick={handleDeleteAccount}>Delete Your Profile</button>
+                    <button class="ui tiny button" type="submit" onClick={handleDeleteAccount}>Delete Your Profile</button>
                 </div>
             </div>
   

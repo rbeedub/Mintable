@@ -22,10 +22,14 @@ function ReflectionCard( {id, notes, setReflectionText, onReflectionSubmit, refl
 return (
 <>
 
+
 <div class="ui grid">
-<div class="six wide column">
+<div class="one wide column"></div>
+<div class="five wide column">
 <div class="ui raised segment">
-What might you do differently moving forward?
+<p>Which dimension resonates the most with you? </p>
+<p>Which dimension do you want to develop?</p>
+
 </div>
 You answered...
 
@@ -37,7 +41,6 @@ You answered...
 </div>
 
 <div class="ten wide column">
-What are your thoughts?
 <form class="ui reply form"  >
 <TextEditor 
 id={id}

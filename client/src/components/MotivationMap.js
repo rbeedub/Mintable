@@ -4,6 +4,7 @@ import EnergizedByCard from "./EnergizedByCard";
 import DrainedByCard from "./DrainedByCard";
 import ContextCard from "./ContextCard";
 import WorkMotivationsCard from "./WorkMotivationsCard";
+import { NavLink } from "react-router-dom"
 
 
 
@@ -39,11 +40,55 @@ console.log(motivationList)
 
 return (
 <>
+<div>
+
+<div class="ui grid">
+<div class="sixteen wide column">
+< NavLink to="/activities"> 
+
+<img class="ui top aligned fluid image" src="/images/MotivationMapSign.svg"/>
+</NavLink>
+</div>
+
+</div>
+</div>
+<div class="ui hidden divider"></div>
+
 {motivationResponse}
+<div class="ui hidden divider"></div>
+
 {energizedByResponse}
+<div class="ui hidden divider"></div>
 {drainedByResponse}
+<div class="ui hidden divider"></div>
 {contextResponse} 
+<div class="ui hidden divider"></div>
 {motivationsResponse} 
+<div class="ui hidden divider"></div>
+
+
+
+
+<div class="ui grid">
+      <div class="two wide column">
+      < NavLink to="/reflection"> <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button> </NavLink>
+
+      </div>
+
+      <div class="twelve wide column"></div>
+      <div class="two wide column">
+      < NavLink to="/drill"> <button class="ui right labeled icon button">
+    Next
+    <i class="right chevron icon"></i>
+  </button></NavLink>
+
+      </div>
+      <br></br>
+
+   </div>
 
 </>
 )

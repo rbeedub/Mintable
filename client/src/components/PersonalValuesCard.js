@@ -40,33 +40,36 @@ function handleSubmitForm(e) {
 return (
 
 <div class="ui grid">
-    <div class="two wide  column"></div>
+    <div class="two wide  column">
+    </div>
     <div class="twelve wide  column">
     <div class="column">
     <div class="ui three column grid">
         <div class="column">
-        <label>My Personal Values</label>
+        {/* <label>My Personal Values</label> */}
+        <img class="ui fluid image" src="./images/PersonalValues.svg" alt="my personal values"/>
+
   
             
             <div class="ui list">
                 <div class="item">
-                    1 {personal_values1}
+                    1. {personal_values1}
                 </div>
                 <br></br>
                 <div class="item">
-                    2 {personal_values2}
+                    2. {personal_values2}
                 </div>
                 <br></br>
                 <div class="item">
-                    3 {personal_values3}
+                    3. {personal_values3}
                 </div>
                 <br></br>
                 <div class="item">
-                    4 {personal_values4}
+                    4. {personal_values4}
                 </div>
                 <br></br>
                 <div class="item">
-                    5 {personal_values5}
+                    5. {personal_values5}
                 </div>
                 <br></br>
                 </div>
@@ -77,32 +80,41 @@ return (
         <div class="ui form">
             <div class="field">
                 <label>List your Values</label>
-                <input value={formData.personal_values1} type="text" name="personal_values1" placeholder="1" onChange={handleFormChange}/>
+                <input value={formData.personal_values1} type="text" name="personal_values1" placeholder="1" onChange={handleFormChange} required/>
             </div>
             <div class="field">
            
-                <input value={formData.personal_values2} type="text" name="personal_values2" placeholder="2" onChange={handleFormChange}/>
+                <input value={formData.personal_values2} type="text" name="personal_values2" placeholder="2" onChange={handleFormChange} required/>
             </div>
             <div class="field">
        
-                <input value={formData.personal_values3} type="text" name="personal_values3" placeholder="3" onChange={handleFormChange}/>
+                <input value={formData.personal_values3} type="text" name="personal_values3" placeholder="3" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.personal_values4} type="text" name="personal_values4" placeholder="4" onChange={handleFormChange}/>
+                <input value={formData.personal_values4} type="text" name="personal_values4" placeholder="4" onChange={handleFormChange} required/>
             </div>
             <div class="field">
      
-                <input value={formData.personal_values5} type="text" name="personal_values5" placeholder="5" onChange={handleFormChange}/>
+                <input value={formData.personal_values5} type="text" name="personal_values5" placeholder="5" onChange={handleFormChange}required/>
             </div>
-            <button class="ui button">Submit</button>
+            <button class="ui tiny button" >Submit</button>
             </div>
             </form>
 
 
         </div>
         <div class=" column">
-            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act. If you're having trouble identifying your values, consider people you admire- who do you gravitate towards and what qualities do you admire about them? Think of the moments you are most proud of and those you regret - why? These will reveal clues about the things you values the most.  Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+        <div class="ui move reveal">
+            <div class="visible content">
+            <img src="./images/stars.svg" class="ui fluid image"/>
+            </div>
+          
+            <div class="hidden content">
+            <p>Personal values are guiding principles that motivate you. They inform what you decide and how you act.</p> <p>If you're having trouble identifying your values, consider people you admire and what qualities you admire about them. </p> <p>Examples include: Family, security, loyalty, intelligence, connection, creativity, humanity etc </p>
+            </div>                
+            </div>
+
         </div>
     </div>
     </div>

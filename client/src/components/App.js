@@ -12,6 +12,10 @@ import Stakeholders from "./Stakeholders";
 import LandingPage from "./LandingPage";
 import DashboardLayout from "./DashboardLayout";
 import EditProfile from "./EditProfile";
+import FiveDimensions from "./FiveDimensions";
+import Aware from "./Aware";
+import Activities from "./Activities";
+import Overview from "./Overview";
 
 
 function App() {
@@ -27,6 +31,7 @@ function App() {
   const [stakeholderText, setStakeholderText] = useState([])
 
  console.log("user", user)
+ console.log("exerciseListApp", exerciseList)
 
 
   useEffect(() => {
@@ -119,6 +124,21 @@ function App() {
         />}/>
         
         <Route exact path="edit-profile" element={<EditProfile/>}/>
+        <Route exact path="five-dimensions" element={<FiveDimensions/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="activities" element={<Activities/>}/>
+        <Route exact path="overview" element={<Overview
+        motivationList={motivationList}
+        exerciseList={exerciseList}
+        />}/>
+
+        {/* <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/>
+        <Route exact path="aware" element={<Aware/>}/> */}
+
+
     </Routes>
 </main>
 </>
