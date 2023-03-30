@@ -5,7 +5,8 @@ import {useState} from "react"
 
 function CommitCard( {id, quick_commit1, onCommitSubmit} ) {
 
-    const initialData = {
+    console.log("CommitCard", quick_commit1)
+       const initialData = {
         quick_commit1:'',
 
         }

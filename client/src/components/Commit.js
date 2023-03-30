@@ -9,6 +9,7 @@ function Commit( { onCommitSubmit, setCommitText, commitText} ) {
   const [showEmailBtn, setShowEmailBtn] = useState(true);
 
 console.log("commit component", commitText)
+
   const commitResponse = commitText.map(commit  => {
     return <CommitCard key={commit.id} {...commit} onCommitSubmit={onCommitSubmit} />
  }
