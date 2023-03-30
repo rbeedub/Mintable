@@ -6,15 +6,15 @@ import { NavLink } from "react-router-dom";
 
 function MotivationDrill( { onExerciseFormSubmit, motivationList, exerciseList, setExerciseList} ) {
 
-   console.log(motivationList)
-
-   const motivationExTbl = exerciseList.map(exercise  => {
-      return <MotivationExerciseTable key={exercise.id} {...exercise}  onExerciseFormSubmit={onExerciseFormSubmit} />
-   }
-   )
+   console.log("exercise list", exerciseList)
 
    const motivationsResponse = motivationList.map(motivation  => {
       return <MiniMotivationCard key={motivation.id} {...motivation}  />
+   }
+   )
+
+   const motivationExTbl = exerciseList.map(exercise  => {
+      return <MotivationExerciseTable key={exercise.id} {...exercise}  onExerciseFormSubmit={onExerciseFormSubmit} />
    }
    )
 

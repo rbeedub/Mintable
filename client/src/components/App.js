@@ -31,6 +31,7 @@ function App() {
   const [stakeholderText, setStakeholderText] = useState([])
 
  console.log("user", user)
+ console.log("exerciseListApp", exerciseList)
 
 
   useEffect(() => {

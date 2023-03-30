@@ -11,10 +11,10 @@ function MotivationExerciseTable( {id, importance, importance2, importance3, imp
        importance4:'',
        importance5:'',
        status:'',
-       status1:'',
        status2:'',
        status3:'',
        status4:'',
+       status5:'',
         }
 
 const [formData, setFormData] = useState(initialData)
@@ -38,6 +38,7 @@ function handleSubmitForm(e) {
     })
     .then((res) => res.json())
     .then(onExerciseFormSubmit)
+
     .then(setFormData(initialData))
 }
 
@@ -87,19 +88,19 @@ function handleSubmitForm(e) {
     </div>
     <div class="field">
 
-      <input value={formData.status1} name="status1" placeholder="#2 movtivation" type="text" onChange={handleFormChange}/>
+      <input value={formData.status2} name="status2" placeholder="#2 movtivation" type="text" onChange={handleFormChange}/>
     </div>
     <div class="field">
 
-      <input value={formData.status2} name="status2" placeholder="#3 movtivation" type="text" onChange={handleFormChange}/>
+      <input value={formData.status3} name="status3" placeholder="#3 movtivation" type="text" onChange={handleFormChange}/>
     </div>
     <div class="field">
 
-      <input value={formData.status3} name="status3" placeholder="#4 movtivation" type="text" onChange={handleFormChange}/>
+      <input value={formData.status4} name="status4" placeholder="#4 movtivation" type="text" onChange={handleFormChange}/>
     </div>
     <div class="field">
 
-      <input value={formData.status4} name="status4" placeholder="#5 movtivation" type="text" onChange={handleFormChange}/>
+      <input value={formData.status5} name="status5" placeholder="#5 movtivation" type="text" onChange={handleFormChange}/>
     </div>
 
     <button class="ui button">Submit</button>
