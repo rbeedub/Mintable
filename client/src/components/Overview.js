@@ -27,7 +27,6 @@ function Overview( {motivationList, exerciseList} ) {
 
         
     <div class="ui grid">
-        <div class="one wide  column"></div>       
          <div class="four wide  column">
          <div class="ui centered card">
             <div class="ui small centered header">About Me</div>
@@ -49,7 +48,7 @@ function Overview( {motivationList, exerciseList} ) {
                         </div>
                         </div>
             </div>        
-            <div class="five wide column">
+            <div class="six wide column">
 
             <div class="ui raised segment">
             <div class="ui small header">Your commitment for the week:</div>
@@ -84,7 +83,8 @@ function Overview( {motivationList, exerciseList} ) {
                     </div>
                     </div>
             </div>
-            <div class="five wide column">
+            <div class="six wide column">
+                <div class="ui centered basic segment">
             <div class="ui segments">
             <div class="ui segment">
             <div class="ui small header">Week One Reflections on the Leadership Dimensions</div>
@@ -97,8 +97,8 @@ function Overview( {motivationList, exerciseList} ) {
             </div>
 
             </div>
+            </div>
   
-         <div class="one wide column"></div>
 
     </div>
     <div class="ui basic segment">
@@ -124,8 +124,8 @@ function Overview( {motivationList, exerciseList} ) {
         <div class="one wide column"></div>
         <div class="fourteen wide column">
         <br></br>
-   <div class="ui raised segment">
-   <div class="ui small header"> Use your stakeholder map as a guide to navigate areas where you can align with your stakeholders, clarify uncertanties and strengthen your relationship: </div>
+   <div class="ui raised center aligned segment">
+   <div class="ui medium header"> Use your stakeholder map as a guide to navigate areas where you can align with your stakeholders, clarify uncertanties and strengthen your relationship: </div>
 
     <div>
 
@@ -165,12 +165,29 @@ function Overview( {motivationList, exerciseList} ) {
         </div>
 
         <div class="one wide column"></div>
-        
+
+    </div>
     <div class="ui grid">
 
-    </div>
+<div class="two wide column">
+    < NavLink to="/stakeholders"> <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button> </NavLink>
 
     </div>
+
+    <div class="twelve wide column"></div>
+
+    <div class="two wide column">
+    < NavLink to="/">   <button class="ui right labeled icon button">
+    Home
+    <i class="home icon"></i>
+  </button></NavLink>
+
+    </div>
+
+</div>
     </>
     )
 }

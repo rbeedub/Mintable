@@ -34,10 +34,10 @@ return (
 </div>
 <br></br>
 <div class="ui grid">
-   <div class="two wide  column"></div>
-   <div class="three wide  column">
-      <br></br>
-   <div class="ui hidden divider"></div>
+   <div class="one wide  column"></div>
+   <div class="four wide  column">
+      < img class="ui fluid image" src="./images/glasses.svg"/>
+   {/* <div class="ui hidden divider"></div> */}
 
       {motivationsResponse}</div>
    <div class="nine wide  column">
@@ -59,17 +59,25 @@ return (
    </div>
    <div class="one wide  column"></div>
 </div>
+
+
 <div class="ui grid">
 
 <div class="two wide column">
-      < NavLink to="/motivation"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+      < NavLink to="/motivation"> <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button> </NavLink>
 
       </div>
 
       <div class="twelve wide column"></div>
 
       <div class="two wide column">
-      < NavLink to="/commit"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
+      < NavLink to="/commit"> <button class="ui right labeled icon button">
+    Next
+    <i class="right chevron icon"></i>
+  </button> </NavLink>
 
       </div>
 

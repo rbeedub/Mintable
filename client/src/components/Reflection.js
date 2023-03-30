@@ -64,14 +64,23 @@ return (
 
    <DimensionBehaviors />
    {reflectionResponse}
+
+
+
    <div class="ui grid">
    <div class="two wide column">
-      < NavLink to="/activities"> <button class="ui tiny button"> All Activities</button></NavLink>
+      < NavLink to="/activities">    <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button></NavLink>
 
       </div>
       <div class="twelve wide column"></div>
       <div class="two wide column">
-      < NavLink to="/motivation"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
+      < NavLink to="/motivation">   <button class="ui right labeled icon button">
+    Next
+    <i class="right chevron icon"></i>
+  </button></NavLink>
 
       </div>
 

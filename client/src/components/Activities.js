@@ -7,9 +7,9 @@ function Activities() {
 return(
 <>
 <div class="ui grid">
-<div class="three wide column"></div>
+<div class="one wide column"></div>
 
-<div class="ten wide column">
+<div class="fourteen wide column">
 
 <div class="ui basic segments">
 <div class="ui center aligned segment">
@@ -130,7 +130,7 @@ return(
 <br></br>
 </div>
 </div>
-<div class="three wide column"></div>
+<div class="one wide column"></div>
 </div>
 </>
     )

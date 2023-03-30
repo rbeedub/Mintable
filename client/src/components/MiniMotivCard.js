@@ -9,12 +9,12 @@ return (
 <>
 <div class="ui five column grid">
   <div class="column">
-    <div class="ui segment">
+    <div class="ui basic segment">
 <div class="ui card">
   <div class="centered content">
     <div class="ui small center aligned teal header">"{motivations1}"</div>
   </div>
-  <div class="uicontent">
+  <div class="ui content">
     <div class="ui small feed">
         <div class="center aligned content">
         <div class="ui mini statistic">
@@ -45,13 +45,13 @@ return (
     </div>
   </div>
   <div class="column">
-    <div class="ui segment">
+    <div class="ui basic segment">
 
     <div class="ui card">
   <div class="centered content">
     <div class="ui small center aligned teal header">"{motivations2}"</div>
   </div>
-  <div class="uicontent">
+  <div class="ui content">
     <div class="ui small feed">
         <div class="center aligned content">
         <div class="ui mini statistic">
@@ -83,14 +83,14 @@ return (
     </div>
   </div>
   <div class="column">
-    <div class="ui segment">
+    <div class="ui basic segment">
   
 
 <div class="ui card">
   <div class="centered content">
     <div class="ui small center aligned teal header">"{motivations3}"</div>
   </div>
-  <div class="uicontent">
+  <div class="ui content">
     <div class="ui small feed">
         <div class="center aligned content">
         <div class="ui mini statistic">
@@ -121,13 +121,13 @@ return (
     </div>
   </div>
   <div class="column">
-    <div class="ui segment">
+    <div class="ui basic segment">
 
     <div class="ui card">
   <div class="centered content">
     <div class="ui small center aligned teal header">"{motivations4}"</div>
   </div>
-  <div class="uicontent">
+  <div class="ui content">
     <div class="ui small feed">
         <div class="center aligned content">
         <div class="ui mini statistic">
@@ -158,13 +158,13 @@ return (
   </div>
   
   <div class="column">
-    <div class="ui segment">
+    <div class="ui basic segment">
 
     <div class="ui card">
   <div class="centered content">
     <div class="ui small center aligned teal header">"{motivations5}"</div>
   </div>
-  <div class="uicontent">
+  <div class="ui content">
     <div class="ui small feed">
         <div class="center aligned content">
         <div class="ui mini statistic">

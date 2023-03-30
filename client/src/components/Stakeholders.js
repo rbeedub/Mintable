@@ -59,14 +59,20 @@ Often, new people managers are thrown into the role without anyone specifically 
 <div class="ui grid">
 
 <div class="two wide column">
-      < NavLink to="/commit"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+      < NavLink to="/commit"><button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button> </NavLink>
 
       </div>
 
       <div class="twelve wide column"></div>
 
       <div class="two wide column">
-      < NavLink to="/overview"> <button class="ui tiny purple button"> Overview </button></NavLink>
+      < NavLink to="/overview"><button class="ui right labeled icon button">
+    Overview
+    <i class="right chevron icon"></i>
+  </button></NavLink>
 
       </div>
 

@@ -65,15 +65,25 @@ return (
 <div class="ui hidden divider"></div>
 {motivationsResponse} 
 <div class="ui hidden divider"></div>
+
+
+
+
 <div class="ui grid">
       <div class="two wide column">
-      < NavLink to="/reflection"> <button class="ui tiny button"> Previous Activity</button></NavLink>
+      < NavLink to="/reflection"> <button class="ui labeled icon button">
+    <i class="left chevron icon"></i>
+    Back
+  </button> </NavLink>
 
       </div>
 
       <div class="twelve wide column"></div>
       <div class="two wide column">
-      < NavLink to="/drill"> <button class="ui tiny purple button"> Next Activity</button></NavLink>
+      < NavLink to="/drill"> <button class="ui right labeled icon button">
+    Next
+    <i class="right chevron icon"></i>
+  </button></NavLink>
 
       </div>
       <br></br>

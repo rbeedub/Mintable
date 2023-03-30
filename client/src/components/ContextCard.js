@@ -76,7 +76,7 @@ return (
                 <img src="./images/hearts.svg" class="ui fluid image"/>
             </div>
             <div class="hidden content">
-            <p>Are there any extrinsic factors or unique considerations in your life that affect how you're thinking about your work right now?</p> <p> For example, "I need to live abroad for a partner" or "I have a sick parent and need to work part-time" or "I have kids and want to work-from-home" or "I'm trying to buy a house to compensation is very important". It's important to label these, whether you act on them or not.</p>
+            <p>Are there any extrinsic factors or unique considerations in your life that affect how you're thinking about your work right now? For example, "I have a sick parent and need to work part-time" or "I have kids and want to work-from-home". It's important to label these, whether you act on them or not.</p>
             </div>
             </div>
         </div>

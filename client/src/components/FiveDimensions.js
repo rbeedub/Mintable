@@ -59,9 +59,7 @@ We’ve developed a manager framework so you can understand what great looks lik
     <div class="ui internally celled grid">
     <div class="row">
       <div class="three wide column">
-        <div class="ui large header">
-        < NavLink to="/aware"> Aware </NavLink>
-    </div>
+        <div class="ui large header"> Aware </div>
     </div>
     <div class="ten wide column">
       <p>Awareness is paying attention. Seeing what might be easy to overlook. Hearing, feeling, sensing, and understanding more carefully</p>
